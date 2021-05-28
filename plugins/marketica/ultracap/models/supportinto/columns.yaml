@@ -1,0 +1,6 @@
+columns:
+    header:
+        label: Header
+        type: text
+        searchable: true
+        sortable: true

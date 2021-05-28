@@ -1,0 +1,231 @@
+1619777644a:1:{s:12:"contacts.htm";a:12:{s:8:"fileName";s:12:"contacts.htm";s:7:"content";s:5456:"title = "Контакты"
+url = "/contacts"
+layout = "default"
+is_hidden = 0
+
+[builderList Contact]
+modelClass = "Marketica\Ultracap\Models\Contact"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "phone_fifth"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[uploadForm]
+group = "Контакты"
+rules[email] = "required|email"
+rules_messages[email.required] = "Пожалуйста, заполните свой EMAIL адрес корректно"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_recipients[] = "k.iphold@yandex.ru"
+mail_template = "martin.forms::mail.notification"
+mail_uploads = 1
+mail_resp_enabled = 0
+mail_resp_field = "email"
+mail_resp_from = "a.kluev@marketica.pro"
+mail_resp_subject = "New mail with ID: {{ record.id }} Form submitted from IP: {{ record.ip }} Contact from: {{ form.name }} {{ form.phone }}"
+mail_resp_template = "New mail with ID: {{ record.id }} Form submitted from IP: {{ record.ip }} Contact from: {{ form.name }} {{ form.phone }}"
+reset_form = 0
+inline_errors = "display"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "invisible"
+emails_date_format = "Y-m-d"
+uploader_enable = 1
+uploader_multi = 0
+placeholderText = "Нажмите или перетащите файлы для загрузки"
+removeText = "Вы уверены?"
+maxSize = 5
+fileTypes[] = "jpg"
+fileTypes[] = "jpeg"
+fileTypes[] = "bmp"
+fileTypes[] = "png"
+fileTypes[] = "webp"
+fileTypes[] = "gif"
+fileTypes[] = "js"
+fileTypes[] = "map"
+fileTypes[] = "ico"
+fileTypes[] = "css"
+fileTypes[] = "less"
+fileTypes[] = "scss"
+fileTypes[] = "ics"
+fileTypes[] = "odt"
+fileTypes[] = "doc"
+fileTypes[] = "docx"
+fileTypes[] = "ppt"
+fileTypes[] = "pptx"
+fileTypes[] = "pdf"
+fileTypes[] = "swf"
+fileTypes[] = "txt"
+fileTypes[] = "xml"
+fileTypes[] = "ods"
+fileTypes[] = "xls"
+fileTypes[] = "xlsx"
+fileTypes[] = "eot"
+fileTypes[] = "woff"
+fileTypes[] = "woff2"
+fileTypes[] = "ttf"
+fileTypes[] = "flv"
+fileTypes[] = "wmv"
+fileTypes[] = "mp3"
+fileTypes[] = "ogg"
+fileTypes[] = "wav"
+fileTypes[] = "avi"
+fileTypes[] = "mov"
+fileTypes[] = "mp4"
+fileTypes[] = "mpeg"
+fileTypes[] = "webm"
+fileTypes[] = "mkv"
+fileTypes[] = "rar"
+fileTypes[] = "xml"
+fileTypes[] = "zip"
+==
+{% set banner = Banner.records %}
+<div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.3.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+				<p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/contacts/">Контакты</a>> <a href="/about-ls-mtron/outline">О компании</a></p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/about-ls-mtron/outline/">О компании</a></h2></li>
+                        <li class="sub_m"><a href="/korporaciya-ajpi">Корпорация АйПи</a></li>
+                        <li class="sub_m"><a href="/contacts/">Контакты</a></li>
+                    </ul>
+                </div>
+                <div id="lnb_m_2">
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2>Контакты</h2>
+            <div id="con_box">
+                <p class="p11">
+                    Корпорация АйПи <br>
+                    {{ Contact.records.0.adress }} <br><br>
+                    <span style="font-weight: normal;">
+                       <a href="tel:88005553361">{{ Contact.records.0.phone_first }}</a> (звонок в России бесплатный) <br>
+                        в Москве: <a href="tel:+74956496429">{{ Contact.records.0.phone_second }}</a> <br>
+                        в Санкт-Петербурге: <a href="tel:+78126003658">{{ Contact.records.0.phone_third }}</a> <br>
+                        в Екатеринбурге: <a href="tel:+73433430132">{{ Contact.records.0.phone_fourth }}</a> <br>
+                        в Новосибирске: <a href="tel:+73832075512">{{ Contact.records.0.phone_fifth }}</a> <br>
+                        <a href="mailto:sales@iphold.ru">{{ Contact.records.0.email }}</a> <br>
+                        </span>
+            </div>
+            {% component 'uploadForm' %}
+        </div>
+    </div>
+</div>
+<script>
+    function form_submit() {
+        var f = document.IndexForm;
+
+        if (f.name.value == "") {
+            alert("Input the Name");
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("Input the Email");
+            return false;
+        }
+
+        if (f.title.value == "") {
+            alert("Input the Title");
+            return false;
+        }
+
+        if (f.cont.value == "") {
+            alert("Input the Comments");
+            return false;
+        }
+        f.submit();
+    }
+</script>";s:5:"mtime";i:1615871203;s:6:"markup";s:2734:"{% set banner = Banner.records %}
+<div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.3.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+				<p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/contacts/">Контакты</a>> <a href="/about-ls-mtron/outline">О компании</a></p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/about-ls-mtron/outline/">О компании</a></h2></li>
+                        <li class="sub_m"><a href="/korporaciya-ajpi">Корпорация АйПи</a></li>
+                        <li class="sub_m"><a href="/contacts/">Контакты</a></li>
+                    </ul>
+                </div>
+                <div id="lnb_m_2">
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2>Контакты</h2>
+            <div id="con_box">
+                <p class="p11">
+                    Корпорация АйПи <br>
+                    {{ Contact.records.0.adress }} <br><br>
+                    <span style="font-weight: normal;">
+                       <a href="tel:88005553361">{{ Contact.records.0.phone_first }}</a> (звонок в России бесплатный) <br>
+                        в Москве: <a href="tel:+74956496429">{{ Contact.records.0.phone_second }}</a> <br>
+                        в Санкт-Петербурге: <a href="tel:+78126003658">{{ Contact.records.0.phone_third }}</a> <br>
+                        в Екатеринбурге: <a href="tel:+73433430132">{{ Contact.records.0.phone_fourth }}</a> <br>
+                        в Новосибирске: <a href="tel:+73832075512">{{ Contact.records.0.phone_fifth }}</a> <br>
+                        <a href="mailto:sales@iphold.ru">{{ Contact.records.0.email }}</a> <br>
+                        </span>
+            </div>
+            {% component 'uploadForm' %}
+        </div>
+    </div>
+</div>
+<script>
+    function form_submit() {
+        var f = document.IndexForm;
+
+        if (f.name.value == "") {
+            alert("Input the Name");
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("Input the Email");
+            return false;
+        }
+
+        if (f.title.value == "") {
+            alert("Input the Title");
+            return false;
+        }
+
+        if (f.cont.value == "") {
+            alert("Input the Comments");
+            return false;
+        }
+        f.submit();
+    }
+</script>";s:4:"code";N;s:5:"title";s:16:"Контакты";s:3:"url";s:9:"/contacts";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:19:"builderList Contact";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Contact";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:11:"phone_fifth";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:18:"builderList Banner";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Banners";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:10:"uploadForm";a:29:{s:5:"group";s:16:"Контакты";s:5:"rules";a:1:{s:5:"email";s:14:"required|email";}s:14:"rules_messages";a:1:{s:14:"email.required";s:85:"Пожалуйста, заполните свой EMAIL адрес корректно";}s:16:"messages_success";s:65:"Ваша форма была успешно отправлена!";s:15:"messages_errors";s:61:"В вашей заявке содержатся ошибки.";s:12:"mail_enabled";s:1:"1";s:15:"mail_recipients";a:1:{i:0;s:18:"k.iphold@yandex.ru";}s:13:"mail_template";s:31:"martin.forms::mail.notification";s:12:"mail_uploads";s:1:"1";s:17:"mail_resp_enabled";s:1:"0";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:21:"a.kluev@marketica.pro";s:17:"mail_resp_subject";s:120:"New mail with ID: {{ record.id }} Form submitted from IP: {{ record.ip }} Contact from: {{ form.name }} {{ form.phone }}";s:18:"mail_resp_template";s:120:"New mail with ID: {{ record.id }} Form submitted from IP: {{ record.ip }} Contact from: {{ form.name }} {{ form.phone }}";s:10:"reset_form";s:1:"0";s:13:"inline_errors";s:7:"display";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"1";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:9:"invisible";s:18:"emails_date_format";s:5:"Y-m-d";s:15:"uploader_enable";s:1:"1";s:14:"uploader_multi";s:1:"0";s:15:"placeholderText";s:77:"Нажмите или перетащите файлы для загрузки";s:10:"removeText";s:20:"Вы уверены?";s:7:"maxSize";s:1:"5";s:9:"fileTypes";a:43:{i:0;s:3:"jpg";i:1;s:4:"jpeg";i:2;s:3:"bmp";i:3;s:3:"png";i:4;s:4:"webp";i:5;s:3:"gif";i:6;s:2:"js";i:7;s:3:"map";i:8;s:3:"ico";i:9;s:3:"css";i:10;s:4:"less";i:11;s:4:"scss";i:12;s:3:"ics";i:13;s:3:"odt";i:14;s:3:"doc";i:15;s:4:"docx";i:16;s:3:"ppt";i:17;s:4:"pptx";i:18;s:3:"pdf";i:19;s:3:"swf";i:20;s:3:"txt";i:21;s:3:"xml";i:22;s:3:"ods";i:23;s:3:"xls";i:24;s:4:"xlsx";i:25;s:3:"eot";i:26;s:4:"woff";i:27;s:5:"woff2";i:28;s:3:"ttf";i:29;s:3:"flv";i:30;s:3:"wmv";i:31;s:3:"mp3";i:32;s:3:"ogg";i:33;s:3:"wav";i:34;s:3:"avi";i:35;s:3:"mov";i:36;s:3:"mp4";i:37;s:4:"mpeg";i:38;s:4:"webm";i:39;s:3:"mkv";i:40;s:3:"rar";i:41;s:3:"xml";i:42;s:3:"zip";}}}}

@@ -1,0 +1,125 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table marketica_ultracap_'
+    - builder_table_create_marketica_ultracap_.php
+1.0.3:
+    - 'Created table marketica_ultracap_contact_'
+    - builder_table_create_marketica_ultracap_contact_.php
+1.0.4:
+    - 'Updated table marketica_ultracap_'
+    - builder_table_update_marketica_ultracap_.php
+1.0.5:
+    - 'Created table marketica_ultracap_faq'
+    - builder_table_create_marketica_ultracap_faq.php
+1.0.6:
+    - 'Updated table marketica_ultracap_faq'
+    - builder_table_update_marketica_ultracap_faq.php
+1.0.7:
+    - 'Drop table marketica_ultracap_faq'
+    - builder_table_delete_marketica_ultracap_faq.php
+1.0.8:
+    - 'Created table marketica_ultracap_faq'
+    - builder_table_create_marketica_ultracap_faq_2.php
+1.0.9:
+    - 'Created table marketica_ultracap_certificates'
+    - builder_table_create_marketica_ultracap_certificates.php
+1.0.10:
+    - 'Updated table marketica_ultracap_certificates'
+    - builder_table_update_marketica_ultracap_certificates.php
+1.0.11:
+    - 'Created table marketica_ultracap_documents'
+    - builder_table_create_marketica_ultracap_documents.php
+1.0.12:
+    - 'Updated table marketica_ultracap_documents'
+    - builder_table_update_marketica_ultracap_documents.php
+1.0.13:
+    - 'Created table marketica_ultracap_support'
+    - builder_table_create_marketica_ultracap_support.php
+1.0.14:
+    - 'Updated table marketica_ultracap_support'
+    - builder_table_update_marketica_ultracap_support.php
+1.0.15:
+    - 'Updated table marketica_ultracap_support'
+    - builder_table_update_marketica_ultracap_support_2.php
+1.0.16:
+    - 'Updated table marketica_ultracap_support'
+    - builder_table_update_marketica_ultracap_support_3.php
+1.0.17:
+    - 'Created table marketica_ultracap_aboutlsuc'
+    - builder_table_create_marketica_ultracap_aboutlsuc.php
+1.0.18:
+    - 'Created table marketica_ultracap_aboutlsmtron'
+    - builder_table_create_marketica_ultracap_aboutlsmtron.php
+1.0.19:
+    - 'Updated table marketica_ultracap_'
+    - builder_table_update_marketica_ultracap__2.php
+1.0.20:
+    - 'Updated table marketica_ultracap_aboutlsmtron'
+    - builder_table_update_marketica_ultracap_aboutlsmtron.php
+1.0.21:
+    - 'Updated table marketica_ultracap_aboutlsuc'
+    - builder_table_update_marketica_ultracap_aboutlsuc.php
+1.0.22:
+    - 'Updated table marketica_ultracap_certificates'
+    - builder_table_update_marketica_ultracap_certificates_2.php
+1.0.23:
+    - 'Updated table marketica_ultracap_contact_'
+    - builder_table_update_marketica_ultracap_contact_.php
+1.0.24:
+    - 'Updated table marketica_ultracap_documents'
+    - builder_table_update_marketica_ultracap_documents_2.php
+1.0.25:
+    - 'Updated table marketica_ultracap_faq'
+    - builder_table_update_marketica_ultracap_faq_2.php
+1.0.26:
+    - 'Updated table marketica_ultracap_support'
+    - builder_table_update_marketica_ultracap_support_4.php
+1.0.27:
+    - 'Updated table marketica_ultracap_aboutlsmtron'
+    - builder_table_update_marketica_ultracap_aboutlsmtron_2.php
+1.0.28:
+    - 'Updated table marketica_ultracap_support'
+    - builder_table_update_marketica_ultracap_support_5.php
+1.0.29:
+    - 'Updated table marketica_ultracap_support'
+    - builder_table_update_marketica_ultracap_support_6.php
+1.0.30:
+    - 'Updated table marketica_ultracap_faq'
+    - builder_table_update_marketica_ultracap_faq_3.php
+1.0.31:
+    - 'Updated table marketica_ultracap_faq'
+    - builder_table_update_marketica_ultracap_faq_4.php
+1.0.32:
+    - 'Created table marketica_ultracap_banners'
+    - builder_table_create_marketica_ultracap_banners.php
+1.0.33:
+    - 'Updated table marketica_ultracap_banners'
+    - builder_table_update_marketica_ultracap_slider.php
+1.0.34:
+    - 'Updated table marketica_ultracap_faq'
+    - builder_table_update_marketica_ultracap_faq_5.php
+1.0.35:
+    - 'Updated table marketica_ultracap_slider'
+    - builder_table_update_marketica_ultracap_banner.php
+1.0.36:
+    - 'Updated table marketica_ultracap_aboutlsuc'
+    - builder_table_update_marketica_ultracap_aboutlsuc_2.php
+1.0.37:
+    - 'Created table marketica_ultracap_minibanner'
+    - builder_table_create_marketica_ultracap_minibanner.php
+1.0.38:
+    - 'Updated table marketica_ultracap_minibanner'
+    - builder_table_update_marketica_ultracap_minibanner.php
+1.0.39:
+    - 'Updated table marketica_ultracap_banner'
+    - builder_table_update_marketica_ultracap_banner_2.php
+1.0.40:
+    - 'Updated table marketica_ultracap_'
+    - builder_table_update_marketica_ultracap__3.php
+1.0.41:
+    - 'Updated table marketica_ultracap_'
+    - builder_table_update_marketica_ultracap__4.php
+1.0.42:
+    - 'Updated table marketica_ultracap_'
+    - builder_table_update_marketica_ultracap__5.php

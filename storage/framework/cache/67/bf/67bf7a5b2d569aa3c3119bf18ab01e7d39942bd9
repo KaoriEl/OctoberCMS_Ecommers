@@ -1,0 +1,213 @@
+1619777644a:1:{s:9:"order.htm";a:13:{s:8:"fileName";s:9:"order.htm";s:7:"content";s:4232:"title = "Заказ"
+url = "/order"
+layout = "default"
+description = "Страница заказа"
+is_hidden = 0
+
+[builderList Contact]
+modelClass = "Marketica\Ultracap\Models\Contact"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "phone_fifth"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[emptyForm]
+rules[email] = "required|email"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_subject = "Заказ с сайта"
+mail_recipients[] = "k.iphold@yandex.ru"
+mail_template = "order"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "invisible"
+emails_date_format = "Y-m-d"
+==
+{% set banner = Banner.records %}
+
+
+
+{##}
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+    var captchas = [];
+
+    var onloadCallback = function() {
+        jQuery('.g-recaptcha').each(function(index, el) {
+            captchas[el.id] = grecaptcha.render(el, $(el).data());
+        });
+    }
+
+    function resetReCaptcha(id) {
+        var widget = captchas[id];
+        grecaptcha.reset(widget);
+    }
+
+</script>
+<div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.3.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/contacts/">Контакты</a>> <a href="/about-ls-mtron/outline">О компании</a></p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/about-ls-mtron/outline/">О компании</a></h2></li>
+                        <li class="sub_m"><a href="{{ 'korporaciya-ajpi'|page }}">Корпорация АйПи</a></li>
+                        <li class="sub_m"><a href="{{ 'contacts'|page }}">Контакты</a></li>
+                    </ul>
+                </div>
+                <div id="lnb_m_2">
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2>Заказ</h2>
+            <div id="con_box">
+                <p class="p11">
+                    <span style="font-weight: normal;">
+                     Заполнение и отправка данной формы не накладывают на вас никаких обязательств. Сведения, указанные вами, будут использованы исключительно для обработки вашего заказа. Мы оперативно сообщим условия поставки заинтересовавшего вас товара: цену, сроки поставки, условия оплаты. Если предложенные условия вам понравятся, мы вышлем договор и счет для оплаты.
+                        </span>
+                </p>
+                <br>
+            </div>
+            {% component 'emptyForm' %}
+        </div>
+    </div>
+</div>
+<script>
+    function form_submit() {
+        var f = document.IndexForm;
+
+        if (f.name.value == "") {
+            alert("Input the Name");
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("Input the Email");
+            return false;
+        }
+
+        if (f.title.value == "") {
+            alert("Input the Title");
+            return false;
+        }
+
+        if (f.cont.value == "") {
+            alert("Input the Comments");
+            return false;
+        }
+        f.submit();
+    }
+</script>
+";s:5:"mtime";i:1615868569;s:6:"markup";s:3068:"{% set banner = Banner.records %}
+
+
+
+{##}
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+    var captchas = [];
+
+    var onloadCallback = function() {
+        jQuery('.g-recaptcha').each(function(index, el) {
+            captchas[el.id] = grecaptcha.render(el, $(el).data());
+        });
+    }
+
+    function resetReCaptcha(id) {
+        var widget = captchas[id];
+        grecaptcha.reset(widget);
+    }
+
+</script>
+<div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.3.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/contacts/">Контакты</a>> <a href="/about-ls-mtron/outline">О компании</a></p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/about-ls-mtron/outline/">О компании</a></h2></li>
+                        <li class="sub_m"><a href="{{ 'korporaciya-ajpi'|page }}">Корпорация АйПи</a></li>
+                        <li class="sub_m"><a href="{{ 'contacts'|page }}">Контакты</a></li>
+                    </ul>
+                </div>
+                <div id="lnb_m_2">
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2>Заказ</h2>
+            <div id="con_box">
+                <p class="p11">
+                    <span style="font-weight: normal;">
+                     Заполнение и отправка данной формы не накладывают на вас никаких обязательств. Сведения, указанные вами, будут использованы исключительно для обработки вашего заказа. Мы оперативно сообщим условия поставки заинтересовавшего вас товара: цену, сроки поставки, условия оплаты. Если предложенные условия вам понравятся, мы вышлем договор и счет для оплаты.
+                        </span>
+                </p>
+                <br>
+            </div>
+            {% component 'emptyForm' %}
+        </div>
+    </div>
+</div>
+<script>
+    function form_submit() {
+        var f = document.IndexForm;
+
+        if (f.name.value == "") {
+            alert("Input the Name");
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("Input the Email");
+            return false;
+        }
+
+        if (f.title.value == "") {
+            alert("Input the Title");
+            return false;
+        }
+
+        if (f.cont.value == "") {
+            alert("Input the Comments");
+            return false;
+        }
+        f.submit();
+    }
+</script>";s:4:"code";N;s:5:"title";s:10:"Заказ";s:3:"url";s:6:"/order";s:6:"layout";s:7:"default";s:11:"description";s:29:"Страница заказа";s:9:"is_hidden";s:1:"0";s:19:"builderList Contact";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Contact";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:11:"phone_fifth";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:18:"builderList Banner";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Banners";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:9:"emptyForm";a:15:{s:5:"rules";a:1:{s:5:"email";s:14:"required|email";}s:16:"messages_success";s:65:"Ваша форма была успешно отправлена!";s:15:"messages_errors";s:61:"В вашей заявке содержатся ошибки.";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:24:"Заказ с сайта";s:15:"mail_recipients";a:1:{i:0;s:18:"k.iphold@yandex.ru";}s:13:"mail_template";s:5:"order";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"1";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:9:"invisible";s:18:"emails_date_format";s:5:"Y-m-d";}}}

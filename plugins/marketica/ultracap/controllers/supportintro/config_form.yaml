@@ -1,0 +1,10 @@
+name: SupportIntro
+form: $/marketica/ultracap/models/supportinto/fields.yaml
+modelClass: Marketica\Ultracap\Models\SupportInto
+defaultRedirect: marketica/ultracap/supportintro
+create:
+    redirect: 'marketica/ultracap/supportintro/update/:id'
+    redirectClose: marketica/ultracap/supportintro
+update:
+    redirect: marketica/ultracap/supportintro
+    redirectClose: marketica/ultracap/supportintro

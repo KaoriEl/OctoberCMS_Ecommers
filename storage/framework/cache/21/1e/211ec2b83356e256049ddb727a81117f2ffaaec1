@@ -1,0 +1,233 @@
+1619180683a:1:{s:21:"emptyform/default.htm";a:6:{s:8:"fileName";s:21:"emptyform/default.htm";s:7:"content";s:3893:"[ProductList]
+sorting = "no"
+==
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    var captchas = [];
+
+    var onloadCallback = function() {
+        jQuery('.g-recaptcha').each(function(index, el) {
+            captchas[el.id] = grecaptcha.render(el, $(el).data());
+        });
+    }
+
+    function resetReCaptcha(id) {
+        var widget = captchas[id];
+        grecaptcha.reset(widget);
+    }
+
+</script>
+<style>
+    select{
+        font-family: sans-serif;
+    }
+    button{
+        font-family: sans-serif;
+    }
+
+</style>
+{% set get_product = ProductList.make().active().all() %}
+       {% for product in get_product  %}
+
+{#            {{ d(product.category) }}#}
+       {% endfor %}
+{{ form_ajax(__SELF__ ~ '::onFormSubmit') }}
+<div id="{{ __SELF__ }}_forms_flash" style=""></div>
+<br>
+<br>
+<div id="view_c" style="margin-top:20px;">
+    <form name="IndexForm" method="post" action="/?enc=L19wb3N0L2NsaWVudFBvc3QuYXNw" class="form-inline"
+          enctype="multipart/form-data">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <colgroup>
+                <col width="15%">
+                <col width="35%">
+                <col width="15%">
+                <col width="35%">
+            </colgroup>
+            <tr>
+                <td>Имя <span style="color:#419EFD">*</span></td>
+                <td>
+                    <input type="text" name="Имя" class="search_input" style="width:100%;    height: 30px;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Телефон</td>
+                <td>
+                    <input type="text" name="Телефон" class="search_input" style="width:100%;    height: 30px;">
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>E-mail <span style="color:#419EFD">*</span></td>
+                <td>
+                    <input type="text" name="email" class="search_input" style="width:100%;    height: 30px;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td valign="top">Продукт: <span style="color:#419EFD">*</span></td>
+                <td colspan="3">
+                    <select type="text" id="product" name="Продукт" style="width:100%;resize: none;margin-left: 10px;margin-bottom: 25px;   background: #E9E9E9;  height: 30px;">
+                       {% for product in get_product  %}
+
+                        <option>{{ product.category.name }} {{ product.name }}</option>
+                       {% endfor %}
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td valign="top">Сообщение <span style="color:#419EFD">*</span></td>
+                <td colspan="3">
+                                    <textarea name="Сообщение" class="search_input"
+                                              style="width:100%;height:400px;resize: none;"></textarea>
+                </td>
+            </tr>
+
+
+
+
+        </table>
+
+        <div class="view_list_btn" style="margin-top:30px;text-align:right;margin-bottom: 30px">
+            <div class="form-group">
+                {% partial '@recaptcha' %}
+            </div>
+
+            <button id="simpleContactSubmitButton" type="submit" class="btn btn-default">Отправить</button>
+
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+{#            {{ form_submit() }}#}
+
+            {#            {{ form_close() }}#}
+        </div>
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+</div>
+";s:5:"mtime";i:1617851227;s:6:"markup";s:3860:"<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    var captchas = [];
+
+    var onloadCallback = function() {
+        jQuery('.g-recaptcha').each(function(index, el) {
+            captchas[el.id] = grecaptcha.render(el, $(el).data());
+        });
+    }
+
+    function resetReCaptcha(id) {
+        var widget = captchas[id];
+        grecaptcha.reset(widget);
+    }
+
+</script>
+<style>
+    select{
+        font-family: sans-serif;
+    }
+    button{
+        font-family: sans-serif;
+    }
+
+</style>
+{% set get_product = ProductList.make().active().all() %}
+       {% for product in get_product  %}
+
+{#            {{ d(product.category) }}#}
+       {% endfor %}
+{{ form_ajax(__SELF__ ~ '::onFormSubmit') }}
+<div id="{{ __SELF__ }}_forms_flash" style=""></div>
+<br>
+<br>
+<div id="view_c" style="margin-top:20px;">
+    <form name="IndexForm" method="post" action="/?enc=L19wb3N0L2NsaWVudFBvc3QuYXNw" class="form-inline"
+          enctype="multipart/form-data">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <colgroup>
+                <col width="15%">
+                <col width="35%">
+                <col width="15%">
+                <col width="35%">
+            </colgroup>
+            <tr>
+                <td>Имя <span style="color:#419EFD">*</span></td>
+                <td>
+                    <input type="text" name="Имя" class="search_input" style="width:100%;    height: 30px;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Телефон</td>
+                <td>
+                    <input type="text" name="Телефон" class="search_input" style="width:100%;    height: 30px;">
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>E-mail <span style="color:#419EFD">*</span></td>
+                <td>
+                    <input type="text" name="email" class="search_input" style="width:100%;    height: 30px;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td valign="top">Продукт: <span style="color:#419EFD">*</span></td>
+                <td colspan="3">
+                    <select type="text" id="product" name="Продукт" style="width:100%;resize: none;margin-left: 10px;margin-bottom: 25px;   background: #E9E9E9;  height: 30px;">
+                       {% for product in get_product  %}
+
+                        <option>{{ product.category.name }} {{ product.name }}</option>
+                       {% endfor %}
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td valign="top">Сообщение <span style="color:#419EFD">*</span></td>
+                <td colspan="3">
+                                    <textarea name="Сообщение" class="search_input"
+                                              style="width:100%;height:400px;resize: none;"></textarea>
+                </td>
+            </tr>
+
+
+
+
+        </table>
+
+        <div class="view_list_btn" style="margin-top:30px;text-align:right;margin-bottom: 30px">
+            <div class="form-group">
+                {% partial '@recaptcha' %}
+            </div>
+
+            <button id="simpleContactSubmitButton" type="submit" class="btn btn-default">Отправить</button>
+
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+{#            {{ form_submit() }}#}
+
+            {#            {{ form_close() }}#}
+        </div>
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+</div>";s:4:"code";N;s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}}}

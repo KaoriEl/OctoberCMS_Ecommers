@@ -1,0 +1,25 @@
+fields:
+    header:
+        label: Заголовок
+        span: full
+        type: text
+    text1:
+        label: Текст
+        span: full
+        size: giant
+        type: richeditor
+    path:
+        label: 'Картинка 1'
+        mode: image
+        span: auto
+        type: mediafinder
+    path2:
+        label: Картинка2
+        mode: image
+        span: auto
+        type: mediafinder
+    path3:
+        label: 'Картинка 3'
+        mode: image
+        span: full
+        type: mediafinder

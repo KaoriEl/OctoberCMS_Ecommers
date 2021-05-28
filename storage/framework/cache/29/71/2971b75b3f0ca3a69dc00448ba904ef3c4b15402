@@ -1,0 +1,142 @@
+1619777644a:1:{s:12:"document.htm";a:11:{s:8:"fileName";s:12:"document.htm";s:7:"content";s:3328:"title = "Документы"
+url = "/document/:page"
+layout = "default"
+is_hidden = 0
+
+[builderList documents]
+modelClass = "Marketica\Ultracap\Models\Document"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+
+[builderList Banners]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set document = documents.records %}
+{% set banner = Banners.records %}
+{% set paginate = document.lastPage %}
+    <div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.2.path }} )"></div>
+    <div id="sub_m">
+        <div id="sub_m_1">
+            <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/support/ultracapacitor/introduction">Поддержка</a>>&nbsp;<a href="#">Документы&nbsp;</a></p>
+        </div>
+    </div>
+
+    <div id="s_contents">
+        <div id="a_contents">
+            <div id="lnb">
+                <div id="lnb_m">
+                    <div id="lnb_m_1">
+                        <ul>
+                            <li class="sub_m"><a href="/support/ultracapacitor/introduction">Руководство по применению</a></li>
+                            <li class="sub_m"><a href="/certificates/default">Сертификаты</a></li>
+                            <li class="sub_m"><a href="/faq/default">Вопрос-ответ</a></li>
+                            <li class="sub_m"><a href="/document/default">Документы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sub_v">
+                <h2>Документы</h2>
+                <div class="snsArea" style="text-align:right;float:right;margin-right:35px;width:150px;margin-top:50px;"></div>
+                <table style="font-size:10pt; text-align:center; color:#555555; width:765px; padding:0px 0px 0px 25px">
+                    <colgroup>
+                        <col width="*">
+                        <col width="120px">
+                    </colgroup>
+                    <tbody>
+                    <tr class="tb02_tr">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    {% for documentOpen in document %}
+                    <tr height="50px" class="tr_line">
+                        <td style="text-align:left;">{{ documentOpen.name }}</td>
+                        <td>
+                            <a href="/storage/app/media{{ documentOpen.path }}">
+                                PDF
+                            </a>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="paging">
+                    {% for i in 1..paginate %}
+                        <a title='{{ i }}' href='http://ip.marketica-dev.ru/document/{{ i }}'><span class='on'>{{ i }}</span></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+";s:5:"mtime";i:1615868301;s:6:"markup";s:2725:"{% set document = documents.records %}
+{% set banner = Banners.records %}
+{% set paginate = document.lastPage %}
+    <div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.2.path }} )"></div>
+    <div id="sub_m">
+        <div id="sub_m_1">
+            <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/support/ultracapacitor/introduction">Поддержка</a>>&nbsp;<a href="#">Документы&nbsp;</a></p>
+        </div>
+    </div>
+
+    <div id="s_contents">
+        <div id="a_contents">
+            <div id="lnb">
+                <div id="lnb_m">
+                    <div id="lnb_m_1">
+                        <ul>
+                            <li class="sub_m"><a href="/support/ultracapacitor/introduction">Руководство по применению</a></li>
+                            <li class="sub_m"><a href="/certificates/default">Сертификаты</a></li>
+                            <li class="sub_m"><a href="/faq/default">Вопрос-ответ</a></li>
+                            <li class="sub_m"><a href="/document/default">Документы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sub_v">
+                <h2>Документы</h2>
+                <div class="snsArea" style="text-align:right;float:right;margin-right:35px;width:150px;margin-top:50px;"></div>
+                <table style="font-size:10pt; text-align:center; color:#555555; width:765px; padding:0px 0px 0px 25px">
+                    <colgroup>
+                        <col width="*">
+                        <col width="120px">
+                    </colgroup>
+                    <tbody>
+                    <tr class="tb02_tr">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    {% for documentOpen in document %}
+                    <tr height="50px" class="tr_line">
+                        <td style="text-align:left;">{{ documentOpen.name }}</td>
+                        <td>
+                            <a href="/storage/app/media{{ documentOpen.path }}">
+                                PDF
+                            </a>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="paging">
+                    {% for i in 1..paginate %}
+                        <a title='{{ i }}' href='http://ip.marketica-dev.ru/document/{{ i }}'><span class='on'>{{ i }}</span></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>";s:4:"code";N;s:5:"title";s:18:"Документы";s:3:"url";s:15:"/document/:page";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:21:"builderList documents";a:9:{s:10:"modelClass";s:34:"Marketica\Ultracap\Models\Document";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:2:"10";s:10:"pageNumber";s:11:"{{ :page }}";}s:19:"builderList Banners";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Banners";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

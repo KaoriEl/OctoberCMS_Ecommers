@@ -1,0 +1,4 @@
+title: AboutLSUC
+modelClass: Marketica\Ultracap\Models\Aboutlsac
+toolbar:
+    buttons: reorder_toolbar

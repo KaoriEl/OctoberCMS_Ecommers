@@ -1,0 +1,4 @@
+title: Banner
+modelClass: Marketica\Ultracap\Models\Banners
+toolbar:
+    buttons: reorder_toolbar

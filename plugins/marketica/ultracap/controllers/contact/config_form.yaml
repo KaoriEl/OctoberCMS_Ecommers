@@ -1,0 +1,10 @@
+name: Contact
+form: $/marketica/ultracap/models/contact/fields.yaml
+modelClass: Marketica\Ultracap\Models\Contact
+defaultRedirect: marketica/ultracap/contact
+create:
+    redirect: 'marketica/ultracap/contact/update/:id'
+    redirectClose: marketica/ultracap/contact
+update:
+    redirect: marketica/ultracap/contact
+    redirectClose: marketica/ultracap/contact

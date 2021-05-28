@@ -1,0 +1,4 @@
+title: SupportIntro
+modelClass: Marketica\Ultracap\Models\SupportInto
+toolbar:
+    buttons: reorder_toolbar

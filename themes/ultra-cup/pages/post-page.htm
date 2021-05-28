@@ -1,0 +1,78 @@
+title = "Новости"
+url = "/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "contacts"
+==
+<style>
+    p{
+        margin-bottom: 5px;
+    }
+    ul li{
+        list-style: disc;
+    }
+.content{
+    margin-left: 35px;
+}
+    .info{
+        display: none;
+    }
+    .featured-images{
+        display: block;
+        margin-left: 35px;
+        margin-right: auto;
+        margin-top: 23px;
+    }
+</style>
+		<div id="sub01_main_container" style="background:url({{ Banner.records.5.Upload.path}} )"></div>
+		<div id="sub_m">
+			<div id="sub_m_1">
+				<p class="sp_01"><a href="#">Главная</a>>&nbsp;<a href="#">Новости</a>>&nbsp;<a href="#">Новость</a></p>
+			</div>
+		</div>
+
+		<div id="s_contents">
+			<div id="a_contents">
+
+<div id="lnb">
+				<div id="lnb_m">
+					<div id="lnb_m_1">
+						<ol>
+							<li><h2><a href="../welcome-message">Новости
+</a></h2></li>
+						</ol>
+					</div>
+				</div>
+</div>
+				<div id="sub_v">
+					<h2 style="text-align: left;margin-bottom: 10px;">{{ blogPost.post.title }}</h2>
+						<div id="sub3_1_1">
+                            {% component 'blogPost' %}
+                            <br>
+							<div class="snsArea" style="display:inline-table;text-align:right;float:right;margin-right:40px;"></div>
+							<table style="font-size:10pt; font-weight:bold; text-align:center; color:#555555; width:765px; padding:0px 0px 0px 25px">
+							<colgroup>
+								<col width="60px">
+								<col width="*">
+								<col width="120px">
+							</colgroup>
+							</table>
+						</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

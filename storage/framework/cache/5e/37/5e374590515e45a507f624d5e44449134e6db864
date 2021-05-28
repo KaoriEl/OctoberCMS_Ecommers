@@ -1,0 +1,146 @@
+1619777644a:1:{s:7:"faq.htm";a:11:{s:8:"fileName";s:7:"faq.htm";s:7:"content";s:12390:"title = "Вопрос-ответ"
+url = "/faq/:page"
+layout = "default"
+is_hidden = 0
+
+[builderList FAQ]
+modelClass = "Marketica\Ultracap\Models\Faq"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "quest"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set faq = FAQ.records %}
+{% set banner = Banner.records %}
+    <div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.0.path }} )"></div>
+    <div id="sub_m">
+        <div id="sub_m_1">
+            <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/support/ultracapacitor/introduction">Поддержка</a>>&nbsp;<a href="#">FAQ&nbsp;</a></p>
+        </div>
+    </div>
+    <div id="s_contents">
+        <div id="a_contents">
+            <div id="lnb">
+                <div id="lnb_m">
+                    <div id="lnb_m_1">
+                        <ul>
+                            <li class="sub_m"><a href="/support/ultracapacitor/introduction">Руководство по применению</a></li>
+                            <li class="sub_m"><a href="/certificates/default">Сертификаты</a></li>
+                            <li class="sub_m"><a href="/faq/default">Вопрос-ответ</a></li>
+                            <li class="sub_m"><a href="/document/default">Документы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sub_v">
+                <h2>FAQ</h2>
+                <div class="snsArea" style="display:inline-table;text-align:right;float:right;margin-right:30px;"></div>
+                <div id="faq_tap">
+                </div>
+
+                <dl class="faq_list">
+                    {% for faq1 in faq %}
+                    <dt><span>Q</span><a class="faq_click" style="cursor:pointer;" data-no="{{ faq1.id }}">{{ faq1.quest }}</a></dt>
+                    <dd>
+                        <div class="faq_box" id="faq_id_{{ faq1.id }}">
+                            <div class="faq_q1">A</div>
+                            <div class="faq_q2">
+                                <p><span style='color: black; font-family: sans-serif'><strong><span lang="EN-US" style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">{{ faq1.answer }}</span></font></span><span style="color: #ff0000;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">  </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">  </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span></strong></span></p><p><strong><font ><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">
+</span></font><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span></strong></p><p><br></p><p><br></p>
+                            </div>
+                        </div>
+                    </dd>
+                    {% endfor %}
+                </dl>
+                <div class="paging">
+                    {% for i in 1..paginate %}
+                        <a title='{{ i }}' href='http://ip.marketica-dev.ru/faq/{{ i }}'><span class='on'>{{ i }}</span></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.faq_click').on("click",function(){
+                $('.faq_box').hide();
+                $('#faq_id_'+$(this).attr("data-no")).show();
+            });
+        });
+    </script>
+</body>
+</html>
+";s:5:"mtime";i:1617849980;s:6:"markup";s:11798:"{% set faq = FAQ.records %}
+{% set banner = Banner.records %}
+    <div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.0.path }} )"></div>
+    <div id="sub_m">
+        <div id="sub_m_1">
+            <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/support/ultracapacitor/introduction">Поддержка</a>>&nbsp;<a href="#">FAQ&nbsp;</a></p>
+        </div>
+    </div>
+    <div id="s_contents">
+        <div id="a_contents">
+            <div id="lnb">
+                <div id="lnb_m">
+                    <div id="lnb_m_1">
+                        <ul>
+                            <li class="sub_m"><a href="/support/ultracapacitor/introduction">Руководство по применению</a></li>
+                            <li class="sub_m"><a href="/certificates/default">Сертификаты</a></li>
+                            <li class="sub_m"><a href="/faq/default">Вопрос-ответ</a></li>
+                            <li class="sub_m"><a href="/document/default">Документы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sub_v">
+                <h2>FAQ</h2>
+                <div class="snsArea" style="display:inline-table;text-align:right;float:right;margin-right:30px;"></div>
+                <div id="faq_tap">
+                </div>
+
+                <dl class="faq_list">
+                    {% for faq1 in faq %}
+                    <dt><span>Q</span><a class="faq_click" style="cursor:pointer;" data-no="{{ faq1.id }}">{{ faq1.quest }}</a></dt>
+                    <dd>
+                        <div class="faq_box" id="faq_id_{{ faq1.id }}">
+                            <div class="faq_q1">A</div>
+                            <div class="faq_q2">
+                                <p><span style='color: black; font-family: sans-serif'><strong><span lang="EN-US" style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">{{ faq1.answer }}</span></font></span><span style="color: #ff0000;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">  </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">  </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span></strong></span></p><p><strong><font ><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;">
+</span></font><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"> </span></font></span><span style="color: red;"><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span><span lang="EN-US" style='color: red; font-family: sans-serif;'><font  size="2"><span style="color: rgb(18, 52, 86); font-family: Arial,sans-serif; font-size: 12pt;"></span></font></span></strong></p><p><br></p><p><br></p>
+                            </div>
+                        </div>
+                    </dd>
+                    {% endfor %}
+                </dl>
+                <div class="paging">
+                    {% for i in 1..paginate %}
+                        <a title='{{ i }}' href='http://ip.marketica-dev.ru/faq/{{ i }}'><span class='on'>{{ i }}</span></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.faq_click').on("click",function(){
+                $('.faq_box').hide();
+                $('#faq_id_'+$(this).attr("data-no")).show();
+            });
+        });
+    </script>
+</body>
+</html>";s:4:"code";N;s:5:"title";s:23:"Вопрос-ответ";s:3:"url";s:10:"/faq/:page";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:15:"builderList FAQ";a:9:{s:10:"modelClass";s:29:"Marketica\Ultracap\Models\Faq";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"quest";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:2:"10";s:10:"pageNumber";s:11:"{{ :page }}";}s:18:"builderList Banner";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Banners";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

@@ -1,0 +1,173 @@
+title = "Продукция"
+url = "/:slug/products-lsuc"
+layout = "default"
+is_hidden = 0
+
+[ProductList]
+sorting = "no"
+
+[CategoryList]
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+has_wildcard = 0
+skip_error = 0
+==
+{# @var ProductList \Lovata\Shopaholic\Components\ProductList #}
+{#    {% set products = ProductList.make().active() %}#}
+{#    {{ d(categories.3.) }}#}
+
+
+{% set categories = CategoryList.make().active() %}
+{% if categories.isNotEmpty() %}
+    <div class="product-list-wrapper">
+        {% for categorie in categories %}
+            {{ d(categorie) }}
+
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+{% set obProductList = ProductList.make().active() %}
+{% if obProductList.isNotEmpty() %}
+    <div class="product-list-wrapper">
+        {% for obProduct in obProductList %}
+            {{ d(obProduct.category) }}
+
+{#            <div data-id="{{ obProduct.id }}">#}
+{#                <h1>{{ obProduct.name }}</h1>#}
+{#                {% if obProduct.preview_image is not empty %}#}
+{#                    <img src="{{ obProduct.preview_image.path }}" title="{{ obProduct.preview_image.title }}" alt="{{ obProduct.preview_image.description }}">#}
+{#                {% endif %}#}
+{#                <div>{{ obProduct.preview_text }}</div>#}
+{#            </div>#}
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+{#{{ d(products) }}#}
+
+{#{% for product in products%}#}
+{#{{ d(products) }}#}
+{#{% endfor %}#}
+<div id="sub01_main_container"></div>
+
+<!--visual의 끝-->
+<!--contents의 시작-->
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="{{ 'home'|page }}">Главная&nbsp;</a>&nbsp;/&nbsp;LSUC&nbsp;</p>
+    </div>
+</div>
+
+<div id="s_contents">
+    <div id="a_contents">
+
+
+        <div id="lnb">
+
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="lsuc">제품소개</a></h2></li>
+                        <li class="sub_m"><a href="lsuc">LSUC(셀)</a></li>
+                        <li class="sub_m"><a href="lsum">LSUM(모듈)</a></li>
+                    </ul>
+                </div>
+{#                {{--                     <div id="lnb_m_2">--}}#}
+{#                {{--                        <a href="../about-lsuc/where-to-buy"><img src="/sites/ultracapacitor/images/sub/kr/l_img01.jpg"></a>--}}#}
+{#                {{--                        <a href="../support/contact-us"><img src="/sites/ultracapacitor/images/sub/kr/l_img02.jpg"></a>--}}#}
+{#                {{--                        <a href="../sub/LSUC_En.pdf" target="_blank"><img--}}#}
+{#                {{--                                src="/sites/ultracapacitor/images/sub/kr/l_img03.jpg"></a>--}}#}
+{#                {{--                    </div>--}}#}
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <!--begin -->
+            <h2 style="float:left;width:100%;">LSUC (셀)</h2>
+{#            {{ d(products) }}#}
+            {% for category in categories %}
+            <div class="Div100">
+                {{ d(category) }}
+                <div class="sub_t_title">{{ category.name }}
+                    <img src="{{ product.category.preview_image.path }}">
+                </div>
+
+                <div class="sub01_tb01">
+                    <table class="table1">
+                        <thead>
+                        <tr bgcolor="#efefef">
+                            <td>Capacitance</td>
+                            <td>Rated<br>Voltage</td>
+                            <td>DC-ESR<br>(mΩ)</td>
+                            <td>Dimension(mm)</td>
+                            <td>Terminal Type</td>
+                            <td>Shape</td>
+                            <td>Part Number</td>
+                            <td>Spec<br>sheet</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+{#                        @foreach($item->products as $product)#}
+{#                        <tr>#}
+{#                            {{--                                        <td><a href="javascript:void(0)" data-img="2_8V100F.jpg" class="show_img">{{ $product->capacitance}}</a></td>--}}#}
+{#                            <td>{{ $product->capacitance}}</td>#}
+{#                            <td>{{ $product->rated_voltage}}</td>#}
+{#                            <td>{{ $product->dc_esr}}</td>#}
+{#                            <td>{{ $product->dimension}}</td>#}
+{#                            <td>{{ $product->terminal_type}}</td>#}
+{#                            <td>{{ $product->shape}}</td>#}
+{#                            <td>{{ $product->part_number}}</td>#}
+{#                            <td>#}
+{##}
+{#                                <a href="{{ config('app.url').'/storage/'.$product->spec_sheet }}" target="_blank">#}
+{#                                    <img src="/sites/ultracapacitor/images/sub/btn_save.png">#}
+{#                                </a>#}
+{##}
+{##}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        @endforeach#}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!--contents의 끝-->
+
+<div id="show_img_panel" style="width:400px;height:400px;position:absolute;display:none;border:4px solid #ccc;">
+    <img src="">
+</div>
+<script>
+    // $(document).ready(function () {
+    //     $('.show_img').on("mouseover", function (event) {
+    //         $('#show_img_panel img').attr("src", "/sites/ultracapacitor/images/sub/product/" + $(this).attr("data-img"));
+    //         $('#show_img_panel').css("top", event.pageY);
+    //         $('#show_img_panel').css("left", event.pageX + 20);
+    //         $('#show_img_panel').show();
+    //     });
+    //
+    //     $('.show_img').on("mouseout", function () {
+    //         $('#show_img_panel').hide();
+    //     });
+    //
+    //     $('.show_img').on("click", function (event) {
+    //         location.href = "/_common/imgdown2.asp?fname=" + $(this).attr("data-img");
+    //     });
+    //
+    //     $('#s_contents').css("height", "1600px");
+    // });
+
+
+</script>
+
+<!-- 컨텐츠 끝 -->

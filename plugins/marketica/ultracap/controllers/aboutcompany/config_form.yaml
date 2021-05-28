@@ -1,0 +1,11 @@
+name: AboutCompany
+modelClass: Marketica\Ultracap\Models\AboutCompany
+form: $/marketica/ultracap/models/aboutcompany/fields.yaml
+defaultRedirect: marketica/ultracap/aboutcompany
+create:
+    redirect: 'marketica/ultracap/aboutcompany/update/:id'
+    redirectClose: marketica/ultracap/aboutcompany
+update:
+    redirect: marketica/ultracap/aboutcompany
+    redirectClose: marketica/ultracap/aboutcompany
+preview: {  }

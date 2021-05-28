@@ -1,0 +1,88 @@
+title = "Список новостей"
+url = "/news_feed/:page"
+layout = "default"
+is_hidden = 0
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{% set banner = Banner.records %}
+{% set posts = blogPosts.posts %}
+		<div id="sub04_main_container">
+            <div id="sub05_main_container" style="background:url(/storage/app/media{{ banner.6.path }} )"> </div>
+
+        </div>
+		<div id="sub_m">
+			<div id="sub_m_1">
+				<p class="sp_01"><a href="/">Главная&nbsp;</a>>&nbsp;<a href="/about-ls-mtron/outline">О компании</a>>&nbsp;<a href="#">Новости</a></p>
+			</div>
+		</div>
+
+		<div id="s_contents">
+			<div id="a_contents">
+
+<div id="lnb">
+
+				<div id="lnb_m">
+					<div id="lnb_m_1">
+						<ul>
+							<li><h2><a href="/about-ls-mtron/outline">О компании
+</a></h2></li>
+                            <li class="sub_m"><a href="/korporaciya-ajpi">Корпорация АйПи</a></li>
+							<li class="sub_m"><a href="/news_feed">Новости</a></li>
+                            <li class="sub_m"><a href="/contacts/">Контакты</a></li>
+
+						</ul>
+					</div>
+				</div>
+</div>
+				<div id="sub_v">
+					<h2>Новости</h2>
+                    <br>
+						<div id="sub3_1_1">
+							<div class="snsArea" style="display:inline-table;text-align:right;float:right;margin-right:40px;"></div>
+							<table style="font-size:10pt; font-weight:bold; text-align:center; color:#555555; width:765px; padding:0px 0px 0px 25px">
+							<colgroup>
+								<col width="60px">
+								<col width="*">
+								<col width="120px">
+							</colgroup>
+								<tbody>
+                                    {% for post in posts %}
+                                        <tr height="50px"  class="tr_line" style="font-weight:normal;">
+                                            <td>{{ post.id }}</td>
+                                            <td><a href="../{{ post.slug }}">{{ post.excerpt|truncate(65, true) }}</a></td>
+                                            <td>{{ post.title }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+								</tbody>
+							</table>
+                            {% set count = blogPosts.posts.lastpage %}
+                            {% if count > 1  %}
+                            <div class="paging">
+                            {% for i in 1..count %}
+                                <a title='{{ i }}' href='http://ip.marketica-dev.ru/news_feed/{{ i }}'><span class='on'>{{ i }}</span></a>
+
+                            {% endfor %}
+                                {% endif %}
+                        </div>
+						</div>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,87 @@
+title = "Сертификаты"
+url = "/certificates/:page"
+layout = "default"
+is_hidden = 0
+
+[builderList certificates]
+modelClass = "Marketica\Ultracap\Models\Certificates"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<!--visual의 시작-->
+
+{% set certificate = certificates.records %}
+{% set banner = Banner.records %}
+{% set paginate = certificate.lastPage %}
+    <div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.1.path }} )"  ></div>
+    <div id="sub_m">
+        <div id="sub_m_1">
+            <p class="sp_01"><a href="#">Главная</a>>&nbsp;<a href="/support/ultracapacitor/introduction"> Поддержка&nbsp;</a>>&nbsp;<a href="#">Сертификаты</a></p>
+        </div>
+    </div>
+    <div id="s_contents">
+        <div id="a_contents">
+
+            <div id="lnb">
+
+                <div id="lnb_m">
+                    <div id="lnb_m_1">
+                        <ul>
+                            <li class="sub_m"><a href="/support/ultracapacitor/introduction">Руководство по применению</a></li>
+                            <li class="sub_m"><a href="/certificates/default">Сертификаты</a></li>
+                            <li class="sub_m"><a href="/faq/default">Вопрос-ответ</a></li>
+                            <li class="sub_m"><a href="/document/default">Документы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sub_v">
+                <h2>Сертификаты</h2>
+                <div class="snsArea" style="display:inline-table;text-align:right;float:right;margin-right:40px;"></div>
+                <div id="sub3_1_1">
+                <p class="sub3_1_1_text_block">Производственные процессы LS Mtron сертифицированы по международным стандартам качества ISO/TS16949, экологической безопасности ISO 14001 и промышленной безопасности OHSAS 18001. Безопасность продукции LS Mtron подтверждена сертификатами UL (США) и CCC (Китай).</p>
+                    <table style="font-size:10pt; text-align:center; color:#555555; width:765px; padding:0px 0px 0px 25px">
+                        <colgroup>
+                            <col width="60px">
+                            <col width="*">
+                            <col width="60px">
+                        </colgroup>
+                        <tbody>
+                        <tr class="tb02_tr">
+                            <td></td>
+                            <td></td>
+                            <td>Файл</td>
+                        </tr>
+                            {% for key,certificateOpen in certificate %}
+                            <tr height="50px" class="tr_line">
+                            <td>{{ key+1 }}</td>
+                            <td style="text-align:left;"><a target="_blank" href="/storage/app/media{{ certificateOpen.path }}">{{ certificateOpen.name }}</a></td>
+                            <td>
+                                <a href="/storage/app/media{{ certificateOpen.path }}" download="{{ certificateOpen.name }}">
+                                    <img src="/themes/ultra-cup/assets/images/sub/btn_save.png">
+                                </a>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

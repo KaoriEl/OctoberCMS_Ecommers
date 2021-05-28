@@ -1,0 +1,10 @@
+name: Banner
+form: $/marketica/ultracap/models/banners/fields.yaml
+modelClass: Marketica\Ultracap\Models\Banners
+defaultRedirect: marketica/ultracap/banner
+create:
+    redirect: 'marketica/ultracap/banner/update/:id'
+    redirectClose: marketica/ultracap/banner
+update:
+    redirect: marketica/ultracap/banner
+    redirectClose: marketica/ultracap/banner

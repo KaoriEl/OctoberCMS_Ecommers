@@ -1,0 +1,10 @@
+name: FAQ
+form: $/marketica/ultracap/models/faq/fields.yaml
+modelClass: Marketica\Ultracap\Models\Faq
+defaultRedirect: marketica/ultracap/faq
+create:
+    redirect: 'marketica/ultracap/faq/update/:id'
+    redirectClose: marketica/ultracap/faq
+update:
+    redirect: marketica/ultracap/faq
+    redirectClose: marketica/ultracap/faq

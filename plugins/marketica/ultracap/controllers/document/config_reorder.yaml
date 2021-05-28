@@ -1,0 +1,4 @@
+title: Document
+modelClass: Marketica\Ultracap\Models\Document
+toolbar:
+    buttons: reorder_toolbar

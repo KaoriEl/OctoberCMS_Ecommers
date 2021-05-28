@@ -1,0 +1,10 @@
+name: Cert
+form: $/marketica/ultracap/models/certificates/fields.yaml
+modelClass: Marketica\Ultracap\Models\Certificates
+defaultRedirect: marketica/ultracap/cert
+create:
+    redirect: 'marketica/ultracap/cert/update/:id'
+    redirectClose: marketica/ultracap/cert
+update:
+    redirect: marketica/ultracap/cert
+    redirectClose: marketica/ultracap/cert
