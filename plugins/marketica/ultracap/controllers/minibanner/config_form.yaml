@@ -1,0 +1,10 @@
+name: Minibanner
+form: $/marketica/ultracap/models/minibanner/fields.yaml
+modelClass: Marketica\Ultracap\Models\Minibanner
+defaultRedirect: marketica/ultracap/minibanner
+create:
+    redirect: 'marketica/ultracap/minibanner/update/:id'
+    redirectClose: marketica/ultracap/minibanner
+update:
+    redirect: marketica/ultracap/minibanner
+    redirectClose: marketica/ultracap/minibanner

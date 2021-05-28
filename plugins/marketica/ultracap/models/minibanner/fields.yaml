@@ -1,0 +1,14 @@
+fields:
+    name:
+        label: Имя
+        span: full
+        type: text
+    path:
+        label: Изображение
+        span: full
+        mode: image
+        type: mediafinder
+    url:
+        label: 'Ссылка на новость'
+        span: full
+        type: text

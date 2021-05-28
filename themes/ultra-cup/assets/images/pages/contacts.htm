@@ -1,0 +1,161 @@
+title = "Контакты"
+url = "/contacts"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Marketica\Contactpage\Models\Contact"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "phone_first"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{#{{ d(records.0) }}#}
+<div id="sub03_main_container"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="{{ 'home'|page }}">Главная&nbsp;</a>&nbsp;/&nbsp;О компании&nbsp;/&nbsp;</a>&nbsp;Контакты</p>
+    </div>
+</div>
+
+<div id="s_contents">
+    <div id="a_contents">
+
+        <div id="lnb">
+
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="support/ultracapacitor/introduction">О компании</a></h2></li>
+                        <li class="sub_m"><a href="">Корпорация АйПи</a></li>
+                        <li class="sub_m"><a href="">Контакты</a></li>
+
+                    </ul>
+                </div>
+                <div id="lnb_m_2">
+{#                    {{--                        <a href="about-lsuc/where-to-buy"><img src="/sites/ultracapacitor/images/sub/l_img01.jpg"></a>--}}#}
+{#                    {{--                        <a href="support/contact-us"><img src="/sites/ultracapacitor/images/sub/l_img02.jpg"></a>--}}#}
+{#                    {{--                        <a href="sub/LSUC_En.pdf" target="_blank"><img--}}#}
+{#                    {{--                                src="/sites/ultracapacitor/images/sub/l_img03.jpg"></a>--}}#}
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2>Контакты</h2>
+            <div id="con_box">
+                <p class="p11">
+
+                    Корпорация АйПи <br>
+                    {{ records.0.adress }} <br><br>
+                    <span style="font-weight: normal;">
+                       <a href="tel:88005553361">{{ records.0.phone_first }}</a> (звонок в России бесплатный) <br>
+                        в Москве: <a href="tel:+74956496429">{{ records.0.phone_second }}</a> <br>
+                        в Санкт-Петербурге: <a href="tel:+78126003658">{{ records.0.phone_third }}</a> <br>
+                        в Екатеринбурге: <a href="tel:+73433430132">{{ records.0.phone_fourth }}</a> <br>
+                        в Новосибирске: <a href="tel:+73832075512">{{ records.0.phone_fifth }}</a> <br>
+                        <a href="mailto:sales@iphold.ru">{{ records.0.email }}</a> <br>
+                        </span>
+            </div>
+            <div id="view_c" style="margin-top:20px;">
+                <form name="IndexForm" method="post" action="/?enc=L19wb3N0L2NsaWVudFBvc3QuYXNw" class="form-inline"
+                      enctype="multipart/form-data">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="35%">
+                            <col width="15%">
+                            <col width="35%">
+                        </colgroup>
+                        <tr>
+                            <td>Имя <span style="color:#419EFD">*</span></td>
+                            <td>
+                                <input type="text" name="name" class="search_input" style="width:100%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Телефон</td>
+                            <td>
+                                <input type="text" name="phone" class="search_input" style="width:100%;">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>E-mail <span style="color:#419EFD">*</span></td>
+                            <td>
+                                <input type="text" name="email" class="search_input" style="width:100%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td valign="top">Сообщение <span style="color:#419EFD">*</span></td>
+                            <td colspan="3">
+                                    <textarea name="cont" class="search_input"
+                                              style="width:100%;height:400px;resize: none;"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td valign="top">Файл</td>
+                            <td colspan="3">
+                                <input type="file" name="file_file1">
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div class="view_list_btn" style="margin-top:30px;text-align:right;margin-bottom: 30px">
+                        <button type="button" class="bbs_btn" onclick="" style="margin-right:20px;">
+{#                            {{--                            <button type="button" class="bbs_btn" onclick="form_submit()" style="margin-right:20px;">--}}#}
+                            Отправить
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contents의 끝-->
+
+
+<script>
+    function form_submit() {
+        var f = document.IndexForm;
+
+        if (f.name.value == "") {
+            alert("Input the Name");
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("Input the Email");
+            return false;
+        }
+
+        if (f.title.value == "") {
+            alert("Input the Title");
+            return false;
+        }
+
+        if (f.cont.value == "") {
+            alert("Input the Comments");
+            return false;
+        }
+        f.submit();
+    }
+</script>
+
+<!-- 컨텐츠 끝 -->

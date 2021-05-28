@@ -1,0 +1,421 @@
+@charset "utf-8";
+
+
+
+h3.blueh3{ color:#073985; font-size:24px; font-weight:bold; }
+h4.blueh4{ color:#073985; font-size:16px; font-weight:bold; white-space:nowrap; }
+.nonbdr{ border-bottom:0 !important; margin-bottom:0 !important; }
+.w4{ width:400px !important; }
+.w535{ width:535px !important; }
+
+
+.outlinelist{ width:100%; overflow:hidden; margin-bottom:25px; }
+.outlinelist img{ float:left; margin-right:20px; }
+.outlinelist ul.olist01{ float:left; width:505px; }
+.outlinelist ul.olist01 li{ background: url("../../www.lsmtron.com/design/images/common/ico_block.gif") no-repeat left 6px; padding:0 0 9px 13px; margin-bottom:10px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+.outlinelist ul.olist01 li+li+li+li+li+li{ margin-bottom:0; }
+.outlinelist ul.olist01 li strong{ display:inline-block; float:left; width:166px; }
+.outlinelist ul.olist01 li em{ display:inline-block; float:left; }
+.outlinelist ul.olist02 { clear:both; float:right; margin:19px 0 10px 0; }
+.outlinelist ul.olist02 li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_green_c.gif") no-repeat left 3px; padding-left:14px; margin-bottom:5px; }
+.outlinelist ul.olist02 li+li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_blue_c.gif") no-repeat left 3px; padding-left:14px; margin-bottom:0; }
+
+.workbox { overflow:hidden;margin-bottom:80px;  }
+.workbox h3{ float:left; margin-top:30px; }
+.workbox ul.olist02 { float:right; }
+.workbox ul.olist02 li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_green_c.gif") no-repeat left 3px; padding-left:14px; margin-bottom:5px; }
+.workbox ul.olist02 li+li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_blue_c.gif") no-repeat left 3px; padding-left:14px; margin-bottom:0; }
+.workbox .wrkbox { width:100%; overflow:hidden; }
+.workbox .wrkbox .worklist{ width:541px; margin:47px auto 0 auto; position:relative; }
+.workbox .wrkbox .worklist span{ position:absolute; width:128px; }
+.workbox .wrkbox .worklist span em {position:absolute; width:118px;top:83px; left:50%; margin-left:-60px; padding-right:2px; font-size:11px; font-weight:bold; text-align:center;}
+.workbox .wrkbox .worklist span.wl01{ top:0; left:205px; height:130px;}
+.workbox .wrkbox .worklist span.wl02{ top:62px; left:47px; }
+.workbox .wrkbox .worklist span.wl03{ top:62px; right:47px; }
+.workbox .wrkbox .worklist span.wl04{ top:207px; left:0; }
+.workbox .wrkbox .worklist span.wl05{ top:207px; right:0; }
+.workbox .wrkbox .worklist span.wl06{ bottom:66px; left:49px; }
+.workbox .wrkbox .worklist span.wl07{ bottom:66px; right:49px }
+.workbox .wrkbox .worklist span.wl08{ bottom:0; left:205px; }
+
+.workimg{ margin:30px 0; }
+
+p.worktxt{ margin-top:12px; line-height:18px; white-space:nowrap; }
+p.worktxt strong{ display:block; color:#333333; }
+
+.ceo02 { overflow:hidden; height:476px; margin-top:20px; background: url("../../www.lsmtron.com/design/images/lsmtron/kje-trim-k-1.jpg") no-repeat left 0; border-bottom:2px solid #1a89e4; }
+.ceo01 { overflow:hidden; height:476px; margin-top:20px; background: url("../../www.lsmtron.com/design/images/lsmtron/img_ceo01.jpg") no-repeat left 0; border-bottom:2px solid #1a89e4; }
+.ceocon{ width:503px; float:right; letter-spacing:-0.3px; }
+.ceocon h3{ font-size:24px; color:#073985; white-space:nowrap; }
+.ceocon h3 strong{ display:block; font-size:24px; line-height:38px; color:#073985; }
+.ceocon p{ margin-top:28px; line-height:16px; text-align: justify; white-space:nowrap; }
+.ceocon p+p{ margin-top:22px; }
+.ceocon p+p+p{ margin-top:22px; }
+.ceocon p+p+p+p{ margin-top:22px; }
+
+.ceocon span{ display:block; margin-top:25px; }
+.ceocon span em{ display:inline-block; vertical-align:top; margin:15px 45px 0 0; font-size:14px; font-weight:bold; }
+
+.introsec { overflow:hidden; margin-top:30px; }
+.introsec .inbox{ float:left; width:90%; margin:0 69px 55px 0; }
+.introsec div+div {width:50% !important; margin:0 !important;}
+.introsec div+div+div{padding-top:35px;}
+.introsec .inbox h4{ font-size:16px; color:#333333; margin-bottom:17px; }
+.introsec .inbox h4 strong { font-weight:bold; }
+.introsec .inbox ul{  }
+.introsec .inbox ul li{ overflow:hidden; margin-bottom:7px; zoom:1; }
+.introsec .inbox ul li span{ width:50px; float:left; color:#333333; font-weight:bold; }
+.introsec .inbox ul li em{ float:left; color:#333333; line-height:16px; }
+.introsec .inbox ul li.last{ margin-bottom:0; }
+.introsec div+div.inbox ul li span {width:50px;}
+.introsec div+div+div.inbox ul li span {width:50px;}
+
+.historylist { margin-top:65px; color:#333333; overflow:hidden; zoom:1; }
+.historylist:first-child {margin-top:0;}
+.historylist img{ float:left; }
+.historylist .hiscon { float:right; width:473px; }
+.historylist .hiscon h3{ color:#333; font-size:28px; font-weight:bold; margin-bottom:30px; letter-spacing:-2px; white-space:nowrap; }
+.historylist .hiscon ul li{ overflow:hidden; zoom:1; }
+.historylist .hiscon ul li strong{  float:left; width:115px; }
+.historylist .hiscon ul li span{ float:left; width:358px; padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #e6e6e6; color:#666666; line-height:16px; }
+.historylist .hiscon ul li.last span{ padding-bottom:0; margin-bottom:0; border-bottom:0; }
+
+.historylist_r { margin-top:80px; color:#333333; overflow:hidden; zoom:1; }
+.historylist_r img{ float:right; }
+.historylist_r .hiscon { float:left; width:473px; }
+.historylist_r .hiscon h3{ color:#333; font-size:28px; font-weight:bold;margin-bottom:30px; letter-spacing:-2px; white-space:nowrap; }
+.historylist_r .hiscon ul li{ overflow:hidden; zoom:1; }
+.historylist_r .hiscon ul li strong{ float:left; width:115px; }
+.historylist_r .hiscon ul li span{ float:left; width:358px; padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid #e6e6e6; color:#666666; line-height:16px; }
+.historylist_r .hiscon ul li.last span{ padding-bottom:0; margin-bottom:0; border-bottom:0; }
+
+
+.lsvision { }
+.lsvision strong{ display:block; color:#073985; font-size:16px; margin-bottom:12px; white-space:nowrap; }
+.lsvision p{ line-height:18px; margin-bottom:30px; white-space:nowrap; }
+.lsvision .partnerbox{ border:1px solid #dfdfdf; }
+.lsvision .partnerbox .lsvbtm{ overflow:hidden; background:#eff1f4; border-top :1px solid #dfdfdf;  padding:12px 0 20px 20px; zoom:1; }
+.lsvision .partnerbox .lsvbtm .vsbox{ float:left; width:480px; margin-right:26px; border-right:1px solid #dadada; overflow:hidden; }
+.lsvision .partnerbox .lsvbtm .vsbox img{ float:left; margin-right:44px; }
+.lsvision .partnerbox .lsvbtm .vsbox strong{ float:left; width:150px; color:#333333; font-size:14px; margin:8px 0 12px 0; }
+.lsvision .partnerbox .lsvbtm .vsbox ul{ float:left; width:280px; }
+.lsvision .partnerbox .lsvbtm .vsbox ul li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_minus.jpg") no-repeat left 7px; padding-left:8px; margin-bottom:6px; letter-spacing:-1px; }
+.lsvision .partnerbox .lsvbtm .vsbox ul li+li+li{ margin-bottom:0; }
+.lsvision .partnerbox .lsvbtm .bgnon{ width:431px; border-right:0; padding-right:0; margin-right:0; }
+
+.hsbox { margin-top:75px; overflow:hidden; }
+.hsbox h3{ font-size:24px; font-weight:bold; color:#073985; margin-bottom:30px; }
+.hsbox .hslist{ float:left; width:320px;}
+.hsbox div+div+div{ margin-right:0 !important; }
+.hsbox .hslist img{ float:left; margin-right:8px; }
+.hsbox .hslist strong{ display:inline-block; color:#333333; font-size:14px; margin:14px 0 12px 0; }
+.hsbox .hslist ul{ float:left; width:211px; }
+.hsbox .hslist ul li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_minus.jpg") no-repeat left 8px; padding-left:8px; line-height:18px; letter-spacing:-0.3px; }
+.hsbox .hslist ul li.last{ margin-bottom:0; }
+
+
+.fina { margin-top:50px; }
+.fina h3{ margin-bottom:8px; }
+
+.state { margin-top:60px; }
+.state h3{ margin-bottom:28px; }
+.state h4{ margin-bottom:8px; color:#333; font-size:14px; font-weight:bold; overflow:hidden; zoom:1; }
+.state h4 span{ float:right; color:#666; font-size:11px; font-weight:normal; *margin-top:-14px; }
+
+
+.rndlists { margin-bottom:60px; }
+.rndlists h3{ margin-bottom:27px; }
+.rndlists h4{ font-size:14px; font-weight:bold; margin-bottom:7px; color:#333333; background: url("../../www.lsmtron.com/design/images/lsmtron/ico_jum.jpg") no-repeat left 7px; padding-left:11px; }
+.rndlists p{ line-height:18px; white-space:nowrap; }
+.rndlists p strong{ color:#ed184c; }
+.rndlists p b{ color:#073985; }
+.rndlists p.enp{ margin:0 0 27px 10px; text-align:justify; }
+.rndlists ul{ margin-left:10px; }
+.rndlists ul li{ background: url("../../www.lsmtron.com/design/images/lsmtron/ico_minus.jpg") no-repeat left 8px; padding-left:8px; margin-bottom:5px; white-space:nowrap; }
+.rndlists ul li+li+li{ margin-bottom:0;}
+
+p.adtxtb { color:#073985; line-height:23px; margin-bottom:57px; font-size:14px; font-weight:bold; width:960px; letter-spacing:0px; white-space:nowrap; }
+
+.advision { margin-bottom:130px; }
+.advision h3{ margin-bottom:27px; }
+.advision p{ line-height:18px; color:#333333; margin-bottom:18px; white-space:nowrap; }
+.advision .adptnbox{ width:100%; border:1px solid #dddddd; }
+.advision .adptnbox .adptncon{ position:relative; background: url("../../www.lsmtron.com/design/images/lsmtron/bg_adtxt00-2014.jpg") no-repeat 0 bottom; width:827px; height:714px; margin: 0 auto; text-align:center; }
+.advision .adptnbox .adptncon .adst01{ margin:100px 0 50px 0; }
+.advision .adptnbox .adptncon .adst02 {margin-bottom:40px;}
+.advision .adptnbox .adptncon .adst02 dt{ margin-bottom:19px; }
+.advision .adptnbox .adptncon .adst03{ position:absolute; left:0; top:614px; width:827px; text-align:center; }
+.advision .adptnbox .adptncon .adptul01{ height:188px; margin-bottom:40px; background: url("../../www.lsmtron.com/design/images/lsmtron/bg_adtxt01-2014.png") no-repeat center bottom; }
+.advision .adptnbox .adptncon .adptul01 h5{ font-size:20px; color:#333; margin-bottom:80px; } /*이해관계자 신뢰 H*/
+.advision .adptnbox .adptncon .adptul01 ul{ overflow:hidden; width:575px; margin:0 auto; }
+.advision .adptnbox .adptncon .adptul01 ul li{ float:left; color:#fff; width:93px; margin-right:65px; text-align:center; font-weight:bold; font-size:13px; }
+.advision .adptnbox .adptncon .adptul01 ul li+li+li+li{ margin:6px 0 0 0; }
+.advision .adptnbox .adptncon ul.adptul02{ overflow:hidden; width:740px; height:47px; margin:0 auto; background: url("../../www.lsmtron.com/design/images/lsmtron/bg_adtxt02-2014.png") no-repeat center bottom; padding:42px 0 0 10px; margin-bottom:30px; }
+.advision .adptnbox .adptncon ul.adptul02 li{ float:left; width:70px; float:right; margin-right:34px; font-size:11px; font-weight:bold; letter-spacing:-1px; }
+.advision .adptnbox .adptncon ul.adptul02 li+li+li+li+li+li+li{  margin-right:-1 }
+.advision { margin-bottom:130px; }
+.advision h3{ margin-bottom:27px; }
+.advision p{ line-height:18px; color:#333333; margin-bottom:18px; white-space:nowrap; }
+.advision .adptnbox2015{ width:100%; border:1px solid #dddddd; }
+.advision .adptnbox2015 .adptncon{ position:relative; background: url("../../www.lsmtron.com/design/images/lsmtron/bg_adtxt00-2014.jpg") no-repeat 0 bottom; width:960px; height:870px; margin: 0 auto; text-align:center; }
+.advision .adptnbox .adptncon .adst01-2015{ margin:20px 0 20px 0; }
+.advision .adptnbox .adptncon .adst02 {margin-bottom:40px;}
+.advision .adptnbox .adptncon .adst02 dt{ margin-bottom:19px; }
+.advision .adptnbox .adptncon .adst03{ position:absolute; left:0; top:614px; width:827px; text-align:center; }
+.advision .adptnbox .adptncon .adptul01{ height:188px; margin-bottom:40px; background: url("../../www.lsmtron.com/design/images/lsmtron/bg_adtxt01-2014.png") no-repeat center bottom; }
+.advision .adptnbox .adptncon .adptul01 h5{ font-size:20px; color:#333; margin-bottom:80px; }
+.advision .adptnbox .adptncon .adptul01 ul{ overflow:hidden; width:581px; margin:0 auto; }
+.advision .adptnbox .adptncon .adptul01 ul li{ float:left; color:#fff; width:96px; margin-right:65px; text-align:center; font-weight:bold; font-size:13px; }
+.advision .adptnbox .adptncon .adptul01 ul li+li+li+li{ margin:6px 0 0 0; }
+.advision .adptnbox .adptncon ul.adptul02{ overflow:hidden; width:740px; height:40px; margin:0 auto; background: url("../../www.lsmtron.com/design/images/lsmtron/bg_adtxt02-2014.png") no-repeat center bottom; padding:40px 0 0 10px; margin-bottom:32px; }
+.advision .adptnbox .adptncon ul.adptul02 li{ float:left; width:69px; float:right; margin-right:34px; font-size:12px; font-weight:bold; letter-spacing:-1px;   }
+.advision .adptnbox .adptncon ul.adptul02 li+li+li+li+li+li+li{  margin-right:-1 }
+
+.wheelcon { margin-bottom:50px; }
+.wheelcon h3{ margin-bottom:27px; }
+.wheelcon p{ color:#333333; margin-bottom:18px; white-space:nowrap; }
+.wheelcon .whconbox{ border:1px solid #dddddd; height:685px; text-align }
+.wheelcon .whconbox .whcbc{ background: url("../../www.lsmtron.com/design/images/lsmtron/bg_wheel.jpg") no-repeat center bottom; width:845px; height:585px; margin:50px auto 0 auto; position:relative; }
+.wheelcon .whconbox .whcbc strong{ position:absolute; top:235px; left:376px;  font-size:20px; display:block; width:117px; text-align:center;  }
+.wheelcon .whconbox .whcbc strong a{ display:block; color:#000000; background: url("../../www.lsmtron.com/design/images/lsmtron/ico_wheel_arrow.jpg") no-repeat center bottom; padding-bottom:34px; }
+.wheelcon .whconbox .whcbc strong b{ display:block; color:#4c4c4c; }
+.wheelcon .whconbox .whcbc ul{ }
+.wheelcon .whconbox .whcbc ul li{ position:absolute; }
+.wheelcon .whconbox .whcbc ul li a{ color:#666666; }
+.wheelcon .whconbox .whcbc ul li em a{ display:inline-block; background: /*url("../../www.lsmtron.com/design/images/lsmtron/ico_arrow_white.png")*/ no-repeat center bottom; line-height:16px; text-align:center; width:50px; padding-bottom:23px; color:#000; font-size:12px; font-weight:bold; }
+.wheelcon .whconbox .whcbc ul li span a{ display:inline-block; background: url("../../www.lsmtron.com/design/images/lsmtron/ico_wheel_arrow.jpg") no-repeat right bottom; font-weight:bold; line-height:18px; text-align:left; padding:0 0px 0px 0; position:absolute; }
+.wheelcon .whconbox .whcbc ul li.whli01{ top:146px; left:453px; text-align:center;}
+.wheelcon .whconbox .whcbc ul li.whli01 span a{ top:-133px; left:110px; width:140px; padding-bottom:27px; padding-right:0; background-position:left bottom;}
+.wheelcon .whconbox .whcbc ul li.whli02{ top:200px; left:531px; text-align:center; }
+.wheelcon .whconbox .whcbc ul li.whli02 span a{ top:-53px; left:167px; padding-bottom:27px; padding-right:0; background-position:left bottom; width:168px; }
+.wheelcon .whconbox .whcbc ul li.whli03 { top:320px; left:533px; text-align:center;}
+.wheelcon .whconbox .whcbc ul li.whli03 span a{ top:49px; left:167px; padding-bottom:27px; padding-right:0; background-position:left bottom; width:390px; }
+.wheelcon .whconbox .whcbc ul li.whli04{ top:388px; left:454px; text-align:center;}
+.wheelcon .whconbox .whcbc ul li.whli04 span a{ top:140px; left:95px; width:306px; padding-bottom:27px; padding-right:0; background-position:left bottom; }
+.wheelcon .whconbox .whcbc ul li.whli05{ top:388px; left:345px; text-align:center;}
+.wheelcon .whconbox .whcbc ul li.whli05 span a{ top:120px; left:-270px; width:245px; padding-bottom:27px; padding-right:0; text-align:left; }
+.wheelcon .whconbox .whcbc ul li.whli06{ top:310px; left:279px; text-align:center; }
+.wheelcon .whconbox .whcbc ul li.whli06 span a{ top:30px; left:-280px; text-align:left; width:160px; padding-bottom:27px; padding-right:0; }
+.wheelcon .whconbox .whcbc ul li.whli07{ top:210px; left:270px; text-align:center;}
+.wheelcon .whconbox .whcbc ul li.whli07 span a{ top:-83px; left:-270px; text-align:left; width:150px; padding-bottom:27px; padding-right:0; }
+.wheelcon .whconbox .whcbc ul li.whli08{ top:146px; left:357px; text-align:center;}
+.wheelcon .whconbox .whcbc ul li.whli08 span a{ top:-133px; left:-170px; text-align:left; width:110px; padding-bottom:27px; padding-right:0; }
+.wheelcon-2014 { margin-bottom:50px; }
+.wheelcon-2014 h3{ margin-bottom:27px; }
+.wheelcon-2014 p{ color:#333333; margin-bottom:18px; white-space:nowrap; }
+.wheelcon .whconbox-2014{ border:1px solid #dddddd; height:685px; text-align }
+.wheelcon .whconbox-2014 .whcbc{ background: url("../../www.lsmtron.com/design/images/lsmtron/bg_wheel-2014.jpg") no-repeat center bottom; width:845px; height:585px; margin:50px auto 0 auto; position:relative; }
+.wheelcon .whconbox-2014 .whcbc strong{ position:absolute; top:250px; left:362px;  font-size:15px; display:block; width:117px; text-align:center;  }
+.wheelcon .whconbox-2014 .whcbc strong a{ display:block; color:#000000; background: url("../../www.lsmtron.com/design/images/lsmtron/ico_wheel_arrow.jpg") no-repeat center bottom; padding-bottom:34px; }
+.wheelcon .whconbox-2014 .whcbc strong b{ display:block; color:#4c4c4c; }
+.wheelcon .whconbox-2014 .whcbc ul{ }
+.wheelcon .whconbox-2014 .whcbc ul li{ position:absolute; }
+.wheelcon .whconbox-2014 .whcbc ul li a{ color:#666666; }
+.wheelcon .whconbox-2014 .whcbc ul li em a{ display:inline-block; background: /*url("../../www.lsmtron.com/design/images/lsmtron/ico_arrow_white.png")*/ no-repeat center bottom; line-height:16px; text-align:center; width:100px; padding-bottom:23px; color:#ffffff; font-size:13px; font-weight:bold; }
+.wheelcon .whconbox .whcbc ul li span a{ display:inline-block; background: url("../../www.lsmtron.com/design/images/lsmtron/ico_wheel_arrow.jpg") no-repeat right bottom; font-weight:bold; line-height:18px; text-align:left; padding:0 28px 3px 0; position:absolute; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli01{ top:100px; left:373px;  }
+.wheelcon .whconbox-2014 .whcbc ul li.whli01-1{ top:-37px; left:230px; width:500px;  }
+.wheelcon .whconbox-2014 .whcbc ul li.whli02{ top:150px; left:520px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli02-1{ top:110px; left:645px; width:500px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli03 { top:315px; left:582px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli03-1{ top:260px; left:705px; width:500px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli04{ top:465px; left:520px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli04-1{ top:415px; left:645px; width:500px;}
+.wheelcon .whconbox-2014 .whcbc ul li.whli05{ top:520px; left:370px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli05-1{ top:580px; left:270px; width:500px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli06{ top:465px; left:225px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli06-1{ top:425px; left:0px; width:500px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli07{ top:315px; left:165px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli07-1{ top:275px; left:-10px; width:500px; }
+.wheelcon .whconbox-2014 .whcbc ul li.whli08{ top:160px; left:227px;}
+.wheelcon .whconbox-2014 .whcbc ul li.whli08-1{ top:110px; left:-5px; width:500px; }
+
+.reportcon {  }
+.reportcon h3{ margin-bottom:28px; }
+.reportcon p.lsch{ margin-bottom:48px; text-align:justify; line-height:18px; white-space:nowrap; }
+.reportcon p.lsch strong{ display:block; color:#333333; margin-bottom:8px; }
+
+.reportcon .pdfbox{ overflow:hidden; border-bottom:1px dashed #d1d1d1; padding: 0 0 30px 80px; margin-bottom:37px; }
+.reportcon .pdfbox .pdfyear{ width:381px; float:left; margin-right:99px; }
+.reportcon .pdfbox div+div{ margin-right:0 !important; }
+.reportcon .pdfbox .pdfyear img{ float:left; margin-right:26px; }
+.reportcon .pdfbox .pdfyear strong{ float:left; width:203px; font-size:20px; }
+.reportcon .pdfbox .pdfyear strong span{ font-size:16px; }
+.reportcon .pdfbox .pdfyear p{ float:left; width:203px; margin-bottom:26px; }
+.reportcon .pdfbox .pdfyear a{ float:left; width:203px; margin-bottom:4px; }
+
+
+
+.outline { overflow:hidden; margin-bottom:50px; }
+.outline h3{ margin-bottom:28px; }
+.outline h4{ margin-bottom:19px; font-size:13px; font-weight:bold; }
+.outline p.tit{ margin-bottom:19px; font-weight:bold; font-size:13px; color:#333; white-space:nowrap; }
+.outline .outbox{ overflow:hidden; }
+.outline .outbox img{ float:left; margin-right:20px; }
+.outline .outbox p{ float:left; color:#333; font-size:18px; font-weight:bold; line-height:25px; width:440px; height:133px; padding:36px 0 0 27px; background:#eff1f4; border:1px solid #dadada; letter-spacing:-0.6px; }
+.outline .outboxl{ border:1px solid #e5e5e5; margin-top:19px; padding:30px 0 42px 29px; overflow:hidden; }
+.outline .outboxl b { font-size:13px; display:block; }
+.outline .outboxl .circleb{ width:450px; float:left; }
+.outline .outboxl .circleb img{ float:left; margin-right:27px; }
+.outline .outboxl .circleb strong{ float:left; width:200px; font-size:16px; color:#073985; margin:5px 0 15px 0; }
+.outline .outboxl .circleb strong.redtxt{ font-size:16px; color:#ed174b; margin:5px 0 15px 0; }
+.outline .outboxl .circleb b{ display:block; color:#333; margin:0 0 7px 0; }
+.outline .outboxl .circleb p{ float:left; width:305px; line-height:18px; }
+.outline .electronic{ overflow:hidden; }
+.outline .electronic .elebox{ float:left; margin-right:18px; }
+.outline .electronic div+div{ margin-right:0 !important; }
+.outline .electronic .elebox h4{ color:#333333; margin-bottom:8px; }
+
+
+.placemap {overflow:hidden; position:relative;margin-top:10px;}
+.placemap .lsmttabMenuwrap .infobox{ overflow:hidden; margin-top:20px; color:#333;}
+.placemap .lsmttabMenuwrap .infobox .maptxt{ width:50% !important;}
+
+.placemap .lsmttabMenuwrap .infobox .w535 > li {width:99% !important;}
+.placemap .lsmttabMenuwrap .infobox .w535 > li.on {width:99% !important;}
+.placemap .lsmttabMenuwrap .infobox .mapright{ float:right; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; border-left:1px solid #e4e4e4;width:49%;height:401px;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt{ float:left; width:99%;; height:402px; border:1px solid #e4e4e4; overflow-y:scroll; overflow-x:hidden;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li{ overflow:hidden; position:relative; padding:14px 0 12px 0; border-bottom:1px solid #e4e4e4; width:95%; color:#666;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li img{ float:left; border:1px solid #e4e4e4; margin:0 0 10px 25px;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li {width:99%;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li.on{ background:#eff1f4; border:1px solid #0d6ebe; width:97%; color:#333;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li.on li {color:#333;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li:last-child{ border-bottom:0; }
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li b {font-size:14px !important; display:inline-block; margin:0 0 12px 18px; width:50%; color:#333333; }
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li > ul{ float:left; margin-left:20px;}
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li > ul > li{ margin-bottom:2px; padding-left:52px; text-indent:-52px; color:#666; font-size:11px; line-height:18px; }
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li > ul > li:last-child{ margin-bottom:0; }
+.placemap .lsmttabMenuwrap .infobox ul.maptxt > li > a{ position:absolute; bottom:2px; right:20px; }
+.placemap .lsmttabMenuwrap .infobox p{ background: url("../../www.lsmtron.com/design/images/common/ico_block.gif") no-repeat left 6px;  padding-left: 7px; margin-top:9px; color: #666; float: right;}
+.placemap .lsmttabMenuwrap .infobox .worldmap{ position:relative; margin-bottom:30px; }
+.placemap .lsmttabMenuwrap .infobox .worldmap img+img{ position:absolute; top:20px; left:20px; }
+.placemap .lsmttabMenuwrap .infobox .worldmap p {position:absolute; left:36px; color:#333; font-size:13px; font-weight:bold; line-height:21px; float:none; margin:0; padding:0; background:none;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .guide01 {top:13px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .guide02 {top:34px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .guide03 {top:55px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap li {position:absolute; font-size:10px; font-weight:bold; line-height:12px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .green {color:#166800;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .red {color:#bc0000;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .blue {color:#004da7;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt01 {top:103px; left:392px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt02 {top:233px; left:291px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt03 {top:252px; left:317px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt04 {top:135px; left:695px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt05 {top:297px; left:812px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt06 {top:163px; left:212px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt07 {top:193px; left:472px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt08 {top:208px; left:419px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt09 {top:180px; left:728px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt10 {top:289px; left:388px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt11 {top:118px; left:410px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt12 {top:140px; left:288px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt13 {top:193px; left:172px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt14 {top:227px; left:440px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt15 {top:193px; left:530px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt16 {top:241px; left:440px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt17 {top:322px; left:782px;}
+.placemap .lsmttabMenuwrap .infobox .worldmap .txt18 {top:193px; left:717px;}
+.placemap .lsmttabMenuwrap .infobox h3{ color:#073985; font-size:24px !important; font-weight:bold; padding-bottom:8px;margin-top:20px;padding-left:0px  !important; }
+.placemap .lsmttabMenuwrap .infobox h3.totalh3{ margin-bottom:10px;padding-left:0px;margin-left:0px; }
+.placemap .lsmttabMenuwrap .infobox h4{ margin-bottom:10px; color:#333; font-size:14px; font-weight:bold; }
+.js .lsmttabMenu {position:relative; width:100%; height:100%; overflow:hidden;}
+.js .lsmt_infobox {position:relative; height:100%; background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') 0 -108px no-repeat;}
+.js .lsmttabMenu .lsmttabMenuwrap {float:left;}
+.js .lsmttabMenu .lsmttab {float:left; position:absolute; z-index:2; overflow:hidden;}
+.js .lsmttabMenu .lsmttab a {width:192px; height:36px; display:inline-block; text-decoration:none; font-size:0; line-height:100px;}
+.js .lsmttabMenu .nt01 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') 0 -72px no-repeat; top:0; left:0;}
+.js .lsmttabMenu .nt02 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') -191px -72px no-repeat;  top:0; left:191px;}
+.js .lsmttabMenu .nt03 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') -382px -72px no-repeat;  top:0; left:382px;}
+.js .lsmttabMenu .nt04 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') -573px -72px no-repeat;  top:0; left:573px;}
+.js .lsmttabMenu .lsmttabMenuwrap.active .nt01 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') 0 -36px no-repeat;height:36px;}
+.js .lsmttabMenu .lsmttabMenuwrap.active .nt02 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') -191px -36px no-repeat;height:36px;}
+.js .lsmttabMenu .lsmttabMenuwrap.active .nt03 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') -382px -36px no-repeat;height:36px;}
+.js .lsmttabMenu .lsmttabMenuwrap.active .nt04 {background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') -573px -36px no-repeat;height:36px;}
+.js .lsmttabMenu .lsmtcnt {width:100%; height:100%; position:relative; left:0; top:35px; z-index:1; display:none; padding-bottom:35px;}
+.js .lsmttabMenu .lsmttabMenuwrap.active .lsmttab a {font-size:0; text-decoration: none;}
+.js .lsmttabMenu .lsmttabMenuwrap.active .lsmtcnt {display:inline-block; }
+.js .lsmttabMenu .lsmtcntbg {width:955px; padding-left:5px;height:36px; background:url('../../www.lsmtron.com/design/images/lsmtron/lsmt_tabbg.png') 0 -111px no-repeat;}
+.js .lsmttabMenu .lsmtcntbg li {float:left; margin-top:12px;}
+.js .lsmttabMenu .lsmtcntbg li a {font-size:12px; color:#666; padding:0 17px; border-right:solid 1px #e4e4e4; line-height:12px;}
+.js .lsmttabMenu .lsmtcntbg li a.active {font-weight:bold;}
+.js .lsmttabMenu .lsmtcntbg li a.last {border-right:0 !important;}
+
+.tbl_type{ border-top:1px solid #000; border-bottom:1px solid #a0a0a0; text-align:center; width:100%;}
+.tbl_type tr th{padding:14px 0; border-bottom:2px solid #000000; font-size:14px; font-weight:bold; color:#333333; }
+.tbl_type tr td{padding:13px 0 12px; border-bottom:1px solid #dadada; color:#333; font-size:12px; }
+.tbl_type tbody tr th{ padding:13px 0 12px 20px; border-bottom:1px solid #dadada; text-align:left; font-weight:normal; font-size:12px; line-height:12px; color:#333333; }
+.tbl_type tbody tr th.pro01{padding:13px 0 12px; border-bottom:1px solid #dadada; color:#666666; line-height:14px; border-right:1px solid #dadada; text-align:center;}
+.tbl_type tr.last td,
+.tbl_type tr.last th,
+.tbl_type tr th.last,
+.tbl_type tr td.last{ border-bottom:0 !important; }
+.tbl_type tr.last td table td{ border-bottom:1px solid #dadada !important; }
+.tbl_type tr.last01 td{ border-bottom:0 !important;}
+.tbl_type tr.last01 th{ border-bottom:0 !important;}
+.tbl_type tr td.ranking{font-weight:bold}
+.tbl_type tr .txt01{ margin-right:7px; }
+.tbl_type .bdr{ border-right:1px solid #dadada;}
+.tbl_type .bggry{ background:#eff1f4; }
+.tbl_type .fowb{ color:#333333; }
+.tbl_type tr .txtlf{ text-align:left; padding-left:20px; }
+.tbl_type tr .txtlf02{ text-align:left; padding-left: 50px; }
+.tbl_type tr .txtlf03{ text-align:left; padding-left:40px; border-bottom:1px solid #e6e6e6 !important; font-weight:normal !important; color:#666;}
+.tbl_type tr .txtlf04{ text-align:left; padding-left: 70px; }
+.tbl_type tr .txtlr01{ text-align:right; padding-right:150px; }
+.tbl_type tr.bgpl{ background:url('../../www.lsmtron.com/design/images/common/ico_pl_off.gif') no-repeat 920px 16px; cursor:pointer;}
+.tbl_type tr.bgpl01{ background:url('../../www.lsmtron.com/design/images/cs/ico_pl_offon00.png') no-repeat 20px 16px; cursor:pointer;}
+.tbl_type tr.active td{ background:url('../../www.lsmtron.com/design/images/common/bg_td_active.jpg') repeat-x 0 bottom; border-bottom:0; }
+.tbl_type tr.active{ background:#f5f6f8 url('../../www.lsmtron.com/design/images/common/ico_pl_on.gif') no-repeat 920px 16px; }
+.tbl_type tr.bgpl01.active .txtlf03{ background:#f5f6f8 url('../../www.lsmtron.com/design/images/cs/ico_pl_offon00.png') no-repeat 20px -32px; color:#212121 !important; border-bottom:1px solid #e6e6e6 !important;}
+.tbl_type tr.on td{ border-bottom:1px dotted #969696; }
+.tbl_type tr.detail > td{ background:#f5f6f8; padding:20px 98px; text-align:left; line-height:22px; color:#333; }
+.tbl_type tr.detail th {padding-left:0; border-bottom:2px solid #000000; background:none; text-align:center;}
+.tbl_type tr.detail td li > ol {margin-bottom:25px;}
+.tbl_type tr.detail td p.pfile{ background:url('../../www.lsmtron.com/design/images/popup/ico_file.jpg') no-repeat left 7px; padding-left:16px; }
+.tbl_type tr.detail td p.pfile span{ display:block; }
+.tbl_type tr.detail td p.pfile span strong {color:#004da7;}
+.tbl_type tr.detail td p.pfile a{ margin-right:5px; text-decoration:underline; color:#666; }
+.tbl_type tr.detail td p.pfile a:first-child {margin-left:17px;}
+.tbl_type tr.detail01 td{padding:13px 40px; text-align:left; line-height:22px; background:#f5f6f8 url('../../www.lsmtron.com/design/images/cs/ico_pl_offon00.png') no-repeat 20px -80px; }
+.tbl_type tr .tbnon{ border-bottom:0; font-size:12px; background:#f5f6f8; }
+.tbl_type tr .send_radio{padding-left:30px; border-left:1px solid #dadada; border-bottom:none; text-align:left; vertical-align:top;}
+.tbl_type tr .send_radio li {padding:4px 0;}
+.tbl_type tr .send_radio p {padding:15px 0 0 17px; font-size:11px; line-height:18px;}
+.tbl_type td img,
+.tbl_type02 td img,
+.tbl_type01 td img {vertical-align:middle;}
+.txbu { color:#043884; }
+.tbl_type02 { border-top:2px solid #565c6a; border-bottom:1px solid #a0a0a0; }
+.tbl_type02_a {border-bottom:1px solid #a0a0a0;}
+.tbl_type02 tr th{ padding:10px 0px 10px 20px; border-bottom:1px solid #dadada; background:#eff1f4; text-align:left; font-weight:normal; font-size:12px; line-height:16px; color:#333333; }
+.tbl_type02 tr th.comment{ font-size:14px; line-height:14px;}
+.tbl_type02 tr th em {font-weight:bold;}
+.tbl_type02 tr td{padding:12px 0px 12px 20px; border-bottom:1px solid #dadada; text-align:left; line-height: 18px; color:#666; }
+.tbl_type02 tr td em{ color:#666; }
+.tbl_type02 tr td em.strong{ color:#333333; }
+.tbl_type02 tr td .course{ width:750px; height:285px; border:1px solid #c5c5c5; overflow-y:scroll; padding:20px 0 0 23px; margin-bottom:15px; }
+.tbl_type02 tr td .course dl{ margin-bottom:20px; color:#676767; }
+.tbl_type02 tr td .course dl dt{ font-weight:bold; color:#323232; margin-bottom:9px; }
+.tbl_type02 tr td .course dl dd{ background:url('../../www.lsmtron.com/design/images/recruit/bg_dot.jpg') no-repeat left 7px ; padding-left:7px; margin:0 0 9px 5px; }
+.tbl_type02 tr td .course dl dd:last-child{ margin-bottom:0px; }
+.tbl_type02 tr td strong{ margin-right:9px; font-weight:bold; font-size:13px; }
+.tbl_type02 tr td span{ margin-right:7px; }
+.tbl_type02 tr td .photodl{ width:540px; overflow:hidden; }
+.tbl_type02 tr td .photodl .photo{ width:110px; height:140px; float:left; margin-right:24px; }
+.tbl_type02 tr td .photodl p {width:100%;margin-bottom: 7px; font-size:11px;}
+.tbl_type02 tr .txtlf{ text-align:left !important; padding-left:20px !important; color:#333; }
+.tbl_type02 tr .txtlf03{ text-align:left; padding-left:20px; border-bottom:solid 1px #ccc !important; font-size:12px !important; color:#333 !important;}
+.tbl_type02 tr .txtlf02{ text-align:left !important; padding-left:90px !important; }
+.tbl_type02 tr.ttare td{ padding:10px 0; }
+.tbl_type02 tr.ttare input {width:98%;}
+.tbl_type02 tr.ttare td textarea{ width:95.8%; height:265px; border:1px solid #c5c5c5; padding:2%; line-height:18px; }
+.tbl_type02 em.bgth{ background:#eff1f4 url('../../www.lsmtron.com/design/images/recruit/bg_bluddot.jpg') no-repeat right 5px; padding-right:11px; font-weight:bold; }
+.tbl_type02 tr .bggry01{ border-bottom:1px solid #cccccc; background:#e4e4e4; text-align:center; padding:15px 0; }
+.tbl_type02 tr .bggry02{ border-right:1px solid #e6e6e6; background:#c2c5ce; text-align:center; padding:15px 0; border-bottom:0 !important; }
+.tbl_type02 tr .bggry03{background:#e4e4e4; text-align:left; padding:0 0 0 20px; border-bottom:solid 1px #ccc; font-size:12px !important; color:#333 !important;}
+.tbl_type02 tr .bggry04{ border-bottom:1px solid #eff1f4; background:#c2c5ce; text-align:center; padding:15px 0; }
+.tbl_type02 tr th.bggry04{ font-weight:bold; }
+.tbl_type02 tr .alirig01{text-align:right; padding-right:30px;}
+.tbl_type02 tr .brdlef01{border-left:1px solid #e4e4e4; text-align:right; padding-right:30px;}
+.tbl_type02 tr.last th, .tbl_type02 tr.last td{ border-bottom:0 !important; }
+.bnon{ border-top:0 !important; }

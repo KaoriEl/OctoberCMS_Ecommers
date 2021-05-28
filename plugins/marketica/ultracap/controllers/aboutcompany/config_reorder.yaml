@@ -1,0 +1,4 @@
+title: AboutCompany
+modelClass: Marketica\Ultracap\Models\AboutCompany
+toolbar:
+    buttons: reorder_toolbar

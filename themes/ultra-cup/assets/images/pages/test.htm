@@ -1,0 +1,13 @@
+title = "test"
+url = "/test"
+is_hidden = 0
+
+[CategoryData]
+
+[ProductData]
+==
+{% component 'CategoryData' %}
+{% component 'ProductData' %}
+
+{% set categories = CategoryData.make().active() %}
+{{ d(CategoryData) }}

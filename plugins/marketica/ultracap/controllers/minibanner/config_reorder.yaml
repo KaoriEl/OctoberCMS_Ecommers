@@ -1,0 +1,4 @@
+title: Minibanner
+modelClass: Marketica\Ultracap\Models\Minibanner
+toolbar:
+    buttons: reorder_toolbar

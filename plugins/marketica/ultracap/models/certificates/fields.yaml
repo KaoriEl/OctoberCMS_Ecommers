@@ -1,0 +1,10 @@
+fields:
+    name:
+        label: 'Название сертификата'
+        span: full
+        type: text
+    path:
+        label: Сертификат
+        mode: file
+        span: full
+        type: mediafinder

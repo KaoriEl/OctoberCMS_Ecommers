@@ -1,0 +1,14 @@
+fields:
+    name:
+        label: 'Название документа'
+        span: full
+        type: text
+    path:
+        label: 'Загрузить документ'
+        mode: file
+        span: left
+        type: mediafinder
+    category:
+        label: Категория
+        span: auto
+        type: text

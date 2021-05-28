@@ -1,0 +1,93 @@
+title = "home"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "contacts"
+postPage = "post-page"
+
+[builderList]
+modelClass = "Marketica\CreateBanner\Models\Banner"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "textarea"
+noRecordsMessage = "No records found"
+detailsPage = "home"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% component 'builderList' %}
+
+{#{{ d(records) }}#}
+{#                {{ d(builderList.records.0.banner.path) }}#}
+
+<script src="{{ 'assets/js/bxslider/jquery.bxslider.js'|theme }}"></script>
+<link href="{{ 'assets/js/bxslider/jquery.bxslider.css'|theme }}" rel="stylesheet" type="text/css"/>
+<div id="main_container">
+    <div id="mainvisual" style="width:100%;">
+        <ul class="bxslider">
+            <li style="background:url({{ builderList.records.0.banner.path }}) top center;width:100%;height:516px;">
+            <li style="background:url({{ builderList.records.3.banner.path }}) top center;width:100%;height:516px;">
+            <li style="background:url({{ builderList.records.4.banner.path }}) top center;width:100%;height:516px;">
+            <li style="background:url({{ builderList.records.5.banner.path }}) top center;width:100%;height:516px;">
+            <li style="background:url({{ builderList.records.6.banner.path }}) top center;width:100%;height:516px;">
+        </ul>
+    </div>
+</div>
+<div id="contents">
+    <div id="article_01">
+        <a href="#"><img src="{{ builderList.records.1.banner.path }}"></a>
+        <a href="#"><img style="padding-left:15px" src="{{ builderList.records.2.banner.path }}"></a>
+        <div id="article_02">
+            <p><span class="span01">Новости</span></p>
+            <br>
+            {% set posts = blogPosts.posts %}
+            
+{#            {% component 'blogPosts' %}#}
+
+            {% for post in posts %}
+
+                <div style="width: 490px;float: left;">
+                    <p style="font-size: 10pt;color: #666666;">
+                        <a href="{{ post.slug }}"><span class="span01">{{ post.title }}<br></span></a>
+                        <a href="{{ post.slug }}">{{ post.excerpt }}</a>
+                        <br><br>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.pop_check').on("click", function () {
+            if ($(this).is(":checked") == true) {
+                set_cookie("ultracapacitor_pop_" + $(this).val(), "1", 24, "");
+                $(this).parent().parent().parent().find(".pop").css("display", "none");
+            }
+        });
+
+        $('.pop_close').on("click", function () {
+            $(this).parent().parent().parent().find(".pop").css("display", "none");
+        });
+
+        /*var roll2 = new rolling_banner(document.getElementById('mainvisual'));
+        roll2.start();
+        */
+        $('.bxslider').bxSlider({
+            auto: true,
+            mode: 'fade',
+            autoControls: false,
+            adaptiveHeight: true,
+            captions: false
+        });
+    });
+</script>

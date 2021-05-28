@@ -1,0 +1,34 @@
+fields:
+    adress:
+        label: Адрес
+        span: auto
+        type: text
+    phone_first:
+        label: 'Общий номер телефона'
+        span: auto
+        type: text
+    phone_second:
+        label: 'Номер Москва'
+        span: auto
+        type: text
+    phone_third:
+        label: 'Номер Санкт-Петербург'
+        span: auto
+        type: text
+    phone_fourth:
+        label: 'Номер Екатеринбург'
+        span: auto
+        type: text
+    phone_fifth:
+        label: 'Номер Новосибирск'
+        span: auto
+        type: text
+    email:
+        label: 'Электронная почта'
+        span: full
+        type: text
+    path:
+        label: Баннер
+        mode: image
+        span: full
+        type: mediafinder

@@ -1,0 +1,10 @@
+name: Slider
+form: $/marketica/ultracap/models/slider/fields.yaml
+modelClass: Marketica\Ultracap\Models\Slider
+defaultRedirect: marketica/ultracap/slider
+create:
+    redirect: 'marketica/ultracap/slider/update/:id'
+    redirectClose: marketica/ultracap/slider
+update:
+    redirect: marketica/ultracap/slider
+    redirectClose: marketica/ultracap/slider

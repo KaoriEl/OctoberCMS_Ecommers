@@ -1,0 +1,10 @@
+name: UltraCap
+form: $/marketica/ultracap/models/ultracap/fields.yaml
+modelClass: Marketica\Ultracap\Models\UltraCap
+defaultRedirect: marketica/ultracap/ultracap
+create:
+    redirect: 'marketica/ultracap/ultracap/update/:id'
+    redirectClose: marketica/ultracap/ultracap
+update:
+    redirect: marketica/ultracap/ultracap
+    redirectClose: marketica/ultracap/ultracap

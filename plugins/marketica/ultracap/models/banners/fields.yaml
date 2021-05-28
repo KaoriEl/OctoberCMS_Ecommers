@@ -1,0 +1,11 @@
+fields:
+    name:
+        label: 'Страница на которой будет баннер'
+        span: full
+        type: text
+    path:
+        label: Баннер
+        mode: image
+        span: full
+        required: 1
+        type: mediafinder

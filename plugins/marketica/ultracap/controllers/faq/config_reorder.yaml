@@ -1,0 +1,4 @@
+title: FAQ
+modelClass: Marketica\Ultracap\Models\Faq
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,4 @@
+title: Cert
+modelClass: Marketica\Ultracap\Models\Certificates
+toolbar:
+    buttons: reorder_toolbar

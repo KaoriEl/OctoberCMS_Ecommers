@@ -1,0 +1,15 @@
+fields:
+    title:
+        label: Заголовок
+        span: full
+        type: text
+    textblock:
+        label: 'Rich editor'
+        size: giant
+        span: full
+        type: richeditor
+    path:
+        label: Изображение
+        mode: image
+        span: full
+        type: mediafinder

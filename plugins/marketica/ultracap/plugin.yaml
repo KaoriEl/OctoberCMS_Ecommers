@@ -1,0 +1,48 @@
+plugin:
+    name: 'marketica.ultracap::lang.plugin.name'
+    description: 'marketica.ultracap::lang.plugin.description'
+    author: marketica
+    icon: oc-icon-adn
+    homepage: ''
+navigation:
+    Ultracap:
+        label: 'marketica.ultracap::lang.plugin.name'
+        url: marketica/ultracap/ultracap
+        icon: icon-life-ring
+        sideMenu:
+            Contact:
+                label: Контакты
+                url: marketica/ultracap/contact
+                icon: icon-smile-o
+            Banner:
+                label: Баннеры
+                url: marketica/ultracap/banner
+                icon: icon-slack
+            Faq:
+                label: FAQ
+                url: marketica/ultracap/faq
+                icon: icon-tag
+            certificates:
+                label: Сертификат
+                url: marketica/ultracap/cert
+                icon: icon-tablet
+            Документы:
+                label: Документы
+                url: marketica/ultracap/document
+                icon: icon-text-width
+            supporIntro:
+                label: Помощь/Вступление
+                url: marketica/ultracap/supportintro
+                icon: icon-sitemap
+            AboutLSUC:
+                label: 'Подробнее о LSUC'
+                url: marketica/ultracap/aboutlsuc
+                icon: icon-skyatlas
+            Slider:
+                label: Слайдер
+                url: marketica/ultracap/slider
+                icon: icon-sitemap
+            MiniBanner:
+                label: 'Рекламные баннеры'
+                url: marketica/ultracap/minibanner
+                icon: icon-soundcloud

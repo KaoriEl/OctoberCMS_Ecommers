@@ -1,0 +1,4 @@
+title: Slider
+modelClass: Marketica\Ultracap\Models\Slider
+toolbar:
+    buttons: reorder_toolbar

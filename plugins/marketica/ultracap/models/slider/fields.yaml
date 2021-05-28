@@ -1,0 +1,14 @@
+fields:
+    name:
+        label: 'Название баннера'
+        span: full
+        type: text
+    path:
+        label: Баннер
+        mode: image
+        span: full
+        type: mediafinder
+    url:
+        label: Ссылка
+        span: full
+        type: text

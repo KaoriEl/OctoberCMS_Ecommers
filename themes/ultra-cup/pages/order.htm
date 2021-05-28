@@ -1,0 +1,128 @@
+title = "Заказ"
+url = "/order"
+layout = "default"
+description = "Страница заказа"
+is_hidden = 0
+
+[builderList Contact]
+modelClass = "Marketica\Ultracap\Models\Contact"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "phone_fifth"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[emptyForm]
+rules[email] = "required|email"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_subject = "Заказ с сайта"
+mail_recipients[] = "k.iphold@yandex.ru"
+mail_template = "order"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "invisible"
+emails_date_format = "Y-m-d"
+==
+{% set banner = Banner.records %}
+
+
+
+{##}
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+    var captchas = [];
+
+    var onloadCallback = function() {
+        jQuery('.g-recaptcha').each(function(index, el) {
+            captchas[el.id] = grecaptcha.render(el, $(el).data());
+        });
+    }
+
+    function resetReCaptcha(id) {
+        var widget = captchas[id];
+        grecaptcha.reset(widget);
+    }
+
+</script>
+<div id="sub03_main_container" style="background:url(/storage/app/media{{ banner.3.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="/">Главная</a>>&nbsp;<a href="/contacts/">Контакты</a>> <a href="/about-ls-mtron/outline">О компании</a></p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/about-ls-mtron/outline/">О компании</a></h2></li>
+                        <li class="sub_m"><a href="{{ 'korporaciya-ajpi'|page }}">Корпорация АйПи</a></li>
+                        <li class="sub_m"><a href="{{ 'contacts'|page }}">Контакты</a></li>
+                    </ul>
+                </div>
+                <div id="lnb_m_2">
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2>Заказ</h2>
+            <div id="con_box">
+                <p class="p11">
+                    <span style="font-weight: normal;">
+                     Заполнение и отправка данной формы не накладывают на вас никаких обязательств. Сведения, указанные вами, будут использованы исключительно для обработки вашего заказа. Мы оперативно сообщим условия поставки заинтересовавшего вас товара: цену, сроки поставки, условия оплаты. Если предложенные условия вам понравятся, мы вышлем договор и счет для оплаты.
+                        </span>
+                </p>
+                <br>
+            </div>
+            {% component 'emptyForm' %}
+        </div>
+    </div>
+</div>
+<script>
+    function form_submit() {
+        var f = document.IndexForm;
+
+        if (f.name.value == "") {
+            alert("Input the Name");
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("Input the Email");
+            return false;
+        }
+
+        if (f.title.value == "") {
+            alert("Input the Title");
+            return false;
+        }
+
+        if (f.cont.value == "") {
+            alert("Input the Comments");
+            return false;
+        }
+        f.submit();
+    }
+</script>

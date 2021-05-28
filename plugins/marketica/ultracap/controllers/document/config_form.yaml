@@ -1,0 +1,10 @@
+name: Document
+form: $/marketica/ultracap/models/document/fields.yaml
+modelClass: Marketica\Ultracap\Models\Document
+defaultRedirect: marketica/ultracap/document
+create:
+    redirect: 'marketica/ultracap/document/update/:id'
+    redirectClose: marketica/ultracap/document
+update:
+    redirect: marketica/ultracap/document
+    redirectClose: marketica/ultracap/document

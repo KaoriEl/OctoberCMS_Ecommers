@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'marketica.ultracap::lang.plugin.name'
+        type: text
+        searchable: true
+        sortable: true

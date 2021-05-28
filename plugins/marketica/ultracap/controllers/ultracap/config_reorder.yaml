@@ -1,0 +1,4 @@
+title: UltraCap
+modelClass: Marketica\Ultracap\Models\UltraCap
+toolbar:
+    buttons: reorder_toolbar

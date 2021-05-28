@@ -1,0 +1,12 @@
+list: $/marketica/ultracap/models/faq/columns.yaml
+modelClass: Marketica\Ultracap\Models\Faq
+title: FAQ
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'marketica/ultracap/faq/update/:id'

@@ -1,0 +1,564 @@
+1619777644a:1:{s:20:"category_product.htm";a:13:{s:8:"fileName";s:20:"category_product.htm";s:7:"content";s:12108:"title = "Продукты"
+url = "/category/:slug"
+layout = "default"
+is_hidden = 0
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 1
+has_wildcard = 0
+skip_error = 0
+
+[ProductList]
+sorting = "no"
+
+[builderList Banner]
+modelClass = "Marketica\Ultracap\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[CategoryList]
+==
+{% set obCategory = CategoryPage.get() %}
+{% set categories = CategoryList.make().active() %}
+{% set propget = ProductList.make().active().all() %}
+{% set banner = Banner.records %}
+{% set obPropertyList = propget.1.property %}
+<div id="sub01_main_container" style="background:url(/storage/app/media{{ banner.4.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="{{ 'home'|page }}">Главная&nbsp;</a>&nbsp;/ {{ obCategory.name }}&nbsp;</p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/category/diskretnye-yachejki">Продукция</a></h2></li>
+                        {% for category in categories %}
+                            {% set categoriy_child = category.children_id_list %}
+                            {% if categoriy_child != null %}
+                                <li class="sub_m"><a href="{{ category.slug }}">{{ category.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2 style="float:left;width:100%;">{{obCategory.name}}</h2>
+            {% for obChildCategory in obCategory.children %}
+                {% set obProductList = ProductList.make().sort(ProductList.getSorting()).active().category(obChildCategory.id) %}
+                <div class="Div100">
+                {% if obChildCategory.name == 'Стандартные модули' %}
+                    <div class="sub_t_title">{{ obChildCategory.name }}
+                    {% else %}
+                        <div class="sub_t_title">{{ obChildCategory.name }}
+                        <img src="{{ obChildCategory.preview_image.path }}" style="width: 110px;height: 110px;">
+                    {% endif %}
+                </div>
+                <div class="sub01_tb01">
+                    {% if obChildCategory.name == 'Стандартные модули' %}
+<style>
+
+    table{
+        border-spacing: 0px;
+        table-layout: fixed;
+    }
+
+    .sub_t_title {
+        color: #06377A;
+        font-weight: bold;
+        margin-left: 30px;
+        border-top: 2px solid #BEC5D8;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        float: left;
+        font-size: 18px;
+    }
+
+    .poster {
+        position: relative;
+        margin: 100px auto;
+        height: 200px;
+        width: 150px;
+    }
+
+    .descr {
+        display: none;
+        margin-left: 100px;
+        padding: 0;
+        margin-top: -24px;
+        background: #f3f3f3;
+        height: auto;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+    }
+
+
+    .poster:hover .descr {
+        display: block;
+        position: absolute;
+        top: 120px;
+        z-index: 9999;
+        width: 400px;
+    }
+
+    .sub_t_title {
+        color: #06377A;
+        font-weight: bold;
+        margin-left: 30px !important;
+        border-top: 2px solid #BEC5D8;
+        width: 109% !important;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        float: left;
+        font-size: 18px;
+    }
+    .table2 th {
+        font-size: 8pt;
+        text-align: center;
+        color: #555;
+        height: 45px;
+        background: #efefef;
+        width: 77px;
+    }
+</style>
+                    <div id="sub_v" style="margin-bottom: 50px;margin-top: -65px;">
+                        <div id="sub01_tb02">
+                            <table  class="table2">
+                                <thead>
+                                <tr>
+                                    <th>Модуль</th>
+                                    <th>Наименование </th>
+                                    <th>Ёмкость </th>
+                                    <th>Напряжение</th>
+                                    <th>ESR </th>
+                                    <th>Ширина</th>
+                                    <th>Высота</th>
+                                    <th>Длина</th>
+                                    <th>Выводы </th>
+                                    <th>Конструктив</td>
+                                    <th>Документация</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% if obProductList.isNotEmpty() %}
+                                {% for Product in obProductList %}
+                                <tr height="98px">
+                                    <td class="poster"><img src="{{ Product.preview_image.path }}" style="width: 100%;"></span>
+                                        <div class="descr">
+                                            <img style="    max-width: 100%;max-height: 100%;object-fit: contain;" src="{{ Product.preview_image.path }}">
+                                        </div>
+                                    </td>
+                                    <td style="">{{ Product.name }}</td>
+                                    {% set ProductProp = Product.property %}
+                                    {% for key, obProperty in ProductProp %}
+                                    <td>
+                                            {% if loop.last %}
+                                                <a href="/storage/app/media{{ obProperty.property_value.getValueString() }}"
+                                                   target="_blank">
+                                                    <img src="/themes/ultra-cup/assets/images/sub/btn_save.png">
+                                                </a>
+                                            {% else %}
+                                            {% if obProperty.property_value.getValueString() != null %}
+                                            {{ obProperty.property_value.getValueString() }} {{obProperty.measure.name}}
+                                            {% endif %}
+                                            {% endif %}
+                                        </td>
+                                    {% endfor %}
+                                {% endfor %}
+                                </tr>
+                                </tbody>
+                                {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                        {% else %}
+                    <style>
+                        .sub_t_title {
+                            color: #06377a;
+                            font-weight: 700;
+                            margin-left: 30px;
+                            border-top: 2px solid #bec5d8;
+                            width: 125px;
+                            margin-top: 64px !important;
+                            margin-bottom: 30px;
+                            float: left;
+                            font-size: 18px;
+                        }
+                        .Div100 {
+                            float: left;
+                            width: 112% !important;
+                        }
+                        .poster {
+                            position: relative;
+                            margin: 100px auto;
+                            height: 200px;
+                            width: 150px;
+                        }
+
+                        .descr {
+                            display: none;
+                            margin-left: 100px;
+                            padding: 0;
+                            margin-top: -95px;
+                            background: #f3f3f3;
+                            height: auto;
+                            -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+                            -webkit-box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+                            box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+                        }
+
+                        .poster:hover .descr {
+                            display: block;
+                            position: absolute;
+                            top: 120px;
+                            z-index: 9999;
+                            width: 400px;
+                        }
+                        table {
+                            border-spacing: 6px !important;
+                        }
+                    </style>
+
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <th>Наименование </th>
+                            <th>Ёмкость </th>
+                            <th>Напряжение</th>
+                            <th>ESR </th>
+                            <th>Ширина</th>
+                            <th>Высота</th>
+                            <th>Выводы </th>
+                            <th>Конструктив</td>
+                            <th>Документация</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                    {% if obProductList.isNotEmpty() %}
+                    {% for Product in obProductList %}
+                    <tr>
+                        <td class="poster"><span href="#"  data-img="2_8V100F.jpg" class="show_img" style=" color: #003377;   cursor: pointer;">{{ Product.name }}</span>
+                            <div class="descr">
+                                <img style="    max-width: 100%;max-height: 100%;object-fit: contain;" src="{{ Product.preview_image.path }}">
+                            </div>
+                        </td>
+                        {% set ProductProp = Product.property %}
+                        {% for key, obProperty in ProductProp %}
+                            <td>
+                                {% if loop.last %}
+                                    <a href="/storage/app/media{{ obProperty.property_value.getValueString() }}"
+                                       target="_blank">
+                                        <img src="/themes/ultra-cup/assets/images/sub/btn_save.png">
+                                    </a>
+                                {% else %}
+                                {% if obProperty.property_value.getValueString() != null %}
+                                {{ obProperty.property_value.getValueString() }} {{obProperty.measure.name}}
+                                {% endif %}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                            {% endif %}
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1616408632;s:6:"markup";s:11624:"{% set obCategory = CategoryPage.get() %}
+{% set categories = CategoryList.make().active() %}
+{% set propget = ProductList.make().active().all() %}
+{% set banner = Banner.records %}
+{% set obPropertyList = propget.1.property %}
+<div id="sub01_main_container" style="background:url(/storage/app/media{{ banner.4.path }} )"></div>
+<div id="sub_m">
+    <div id="sub_m_1">
+        <p class="sp_01"><a href="{{ 'home'|page }}">Главная&nbsp;</a>&nbsp;/ {{ obCategory.name }}&nbsp;</p>
+    </div>
+</div>
+<div id="s_contents">
+    <div id="a_contents">
+        <div id="lnb">
+            <div id="lnb_m">
+                <div id="lnb_m_1">
+                    <ul>
+                        <li><h2><a href="/category/diskretnye-yachejki">Продукция</a></h2></li>
+                        {% for category in categories %}
+                            {% set categoriy_child = category.children_id_list %}
+                            {% if categoriy_child != null %}
+                                <li class="sub_m"><a href="{{ category.slug }}">{{ category.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div id="sub_v">
+            <h2 style="float:left;width:100%;">{{obCategory.name}}</h2>
+            {% for obChildCategory in obCategory.children %}
+                {% set obProductList = ProductList.make().sort(ProductList.getSorting()).active().category(obChildCategory.id) %}
+                <div class="Div100">
+                {% if obChildCategory.name == 'Стандартные модули' %}
+                    <div class="sub_t_title">{{ obChildCategory.name }}
+                    {% else %}
+                        <div class="sub_t_title">{{ obChildCategory.name }}
+                        <img src="{{ obChildCategory.preview_image.path }}" style="width: 110px;height: 110px;">
+                    {% endif %}
+                </div>
+                <div class="sub01_tb01">
+                    {% if obChildCategory.name == 'Стандартные модули' %}
+<style>
+
+    table{
+        border-spacing: 0px;
+        table-layout: fixed;
+    }
+
+    .sub_t_title {
+        color: #06377A;
+        font-weight: bold;
+        margin-left: 30px;
+        border-top: 2px solid #BEC5D8;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        float: left;
+        font-size: 18px;
+    }
+
+    .poster {
+        position: relative;
+        margin: 100px auto;
+        height: 200px;
+        width: 150px;
+    }
+
+    .descr {
+        display: none;
+        margin-left: 100px;
+        padding: 0;
+        margin-top: -24px;
+        background: #f3f3f3;
+        height: auto;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+        box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+    }
+
+
+    .poster:hover .descr {
+        display: block;
+        position: absolute;
+        top: 120px;
+        z-index: 9999;
+        width: 400px;
+    }
+
+    .sub_t_title {
+        color: #06377A;
+        font-weight: bold;
+        margin-left: 30px !important;
+        border-top: 2px solid #BEC5D8;
+        width: 109% !important;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        float: left;
+        font-size: 18px;
+    }
+    .table2 th {
+        font-size: 8pt;
+        text-align: center;
+        color: #555;
+        height: 45px;
+        background: #efefef;
+        width: 77px;
+    }
+</style>
+                    <div id="sub_v" style="margin-bottom: 50px;margin-top: -65px;">
+                        <div id="sub01_tb02">
+                            <table  class="table2">
+                                <thead>
+                                <tr>
+                                    <th>Модуль</th>
+                                    <th>Наименование </th>
+                                    <th>Ёмкость </th>
+                                    <th>Напряжение</th>
+                                    <th>ESR </th>
+                                    <th>Ширина</th>
+                                    <th>Высота</th>
+                                    <th>Длина</th>
+                                    <th>Выводы </th>
+                                    <th>Конструктив</td>
+                                    <th>Документация</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% if obProductList.isNotEmpty() %}
+                                {% for Product in obProductList %}
+                                <tr height="98px">
+                                    <td class="poster"><img src="{{ Product.preview_image.path }}" style="width: 100%;"></span>
+                                        <div class="descr">
+                                            <img style="    max-width: 100%;max-height: 100%;object-fit: contain;" src="{{ Product.preview_image.path }}">
+                                        </div>
+                                    </td>
+                                    <td style="">{{ Product.name }}</td>
+                                    {% set ProductProp = Product.property %}
+                                    {% for key, obProperty in ProductProp %}
+                                    <td>
+                                            {% if loop.last %}
+                                                <a href="/storage/app/media{{ obProperty.property_value.getValueString() }}"
+                                                   target="_blank">
+                                                    <img src="/themes/ultra-cup/assets/images/sub/btn_save.png">
+                                                </a>
+                                            {% else %}
+                                            {% if obProperty.property_value.getValueString() != null %}
+                                            {{ obProperty.property_value.getValueString() }} {{obProperty.measure.name}}
+                                            {% endif %}
+                                            {% endif %}
+                                        </td>
+                                    {% endfor %}
+                                {% endfor %}
+                                </tr>
+                                </tbody>
+                                {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                        {% else %}
+                    <style>
+                        .sub_t_title {
+                            color: #06377a;
+                            font-weight: 700;
+                            margin-left: 30px;
+                            border-top: 2px solid #bec5d8;
+                            width: 125px;
+                            margin-top: 64px !important;
+                            margin-bottom: 30px;
+                            float: left;
+                            font-size: 18px;
+                        }
+                        .Div100 {
+                            float: left;
+                            width: 112% !important;
+                        }
+                        .poster {
+                            position: relative;
+                            margin: 100px auto;
+                            height: 200px;
+                            width: 150px;
+                        }
+
+                        .descr {
+                            display: none;
+                            margin-left: 100px;
+                            padding: 0;
+                            margin-top: -95px;
+                            background: #f3f3f3;
+                            height: auto;
+                            -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+                            -webkit-box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+                            box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
+                        }
+
+                        .poster:hover .descr {
+                            display: block;
+                            position: absolute;
+                            top: 120px;
+                            z-index: 9999;
+                            width: 400px;
+                        }
+                        table {
+                            border-spacing: 6px !important;
+                        }
+                    </style>
+
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <th>Наименование </th>
+                            <th>Ёмкость </th>
+                            <th>Напряжение</th>
+                            <th>ESR </th>
+                            <th>Ширина</th>
+                            <th>Высота</th>
+                            <th>Выводы </th>
+                            <th>Конструктив</td>
+                            <th>Документация</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                    {% if obProductList.isNotEmpty() %}
+                    {% for Product in obProductList %}
+                    <tr>
+                        <td class="poster"><span href="#"  data-img="2_8V100F.jpg" class="show_img" style=" color: #003377;   cursor: pointer;">{{ Product.name }}</span>
+                            <div class="descr">
+                                <img style="    max-width: 100%;max-height: 100%;object-fit: contain;" src="{{ Product.preview_image.path }}">
+                            </div>
+                        </td>
+                        {% set ProductProp = Product.property %}
+                        {% for key, obProperty in ProductProp %}
+                            <td>
+                                {% if loop.last %}
+                                    <a href="/storage/app/media{{ obProperty.property_value.getValueString() }}"
+                                       target="_blank">
+                                        <img src="/themes/ultra-cup/assets/images/sub/btn_save.png">
+                                    </a>
+                                {% else %}
+                                {% if obProperty.property_value.getValueString() != null %}
+                                {{ obProperty.property_value.getValueString() }} {{obProperty.measure.name}}
+                                {% endif %}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                            {% endif %}
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:16:"Продукты";s:3:"url";s:15:"/category/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:12:"CategoryPage";a:5:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"1";s:12:"has_wildcard";s:1:"0";s:10:"skip_error";s:1:"0";}s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}s:18:"builderList Banner";a:8:{s:10:"modelClass";s:33:"Marketica\Ultracap\Models\Banners";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"name";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:12:"CategoryList";a:0:{}}}

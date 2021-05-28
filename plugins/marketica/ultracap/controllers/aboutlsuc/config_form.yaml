@@ -1,0 +1,10 @@
+name: AboutLSUC
+form: $/marketica/ultracap/models/aboutlsac/fields.yaml
+modelClass: Marketica\Ultracap\Models\Aboutlsac
+defaultRedirect: marketica/ultracap/aboutlsuc
+create:
+    redirect: 'marketica/ultracap/aboutlsuc/update/:id'
+    redirectClose: marketica/ultracap/aboutlsuc
+update:
+    redirect: marketica/ultracap/aboutlsuc
+    redirectClose: marketica/ultracap/aboutlsuc

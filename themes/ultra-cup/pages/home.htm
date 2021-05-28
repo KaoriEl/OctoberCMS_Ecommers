@@ -1,0 +1,124 @@
+title = "LS Ultracapacitor"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "contacts"
+postPage = "post-page"
+
+[builderList UltraCap]
+modelClass = "Marketica\Ultracap\Models\Slider"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList minibanner]
+modelClass = "Marketica\Ultracap\Models\Minibanner"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set UltraCaps = UltraCap.records %}
+{% set minibanner = minibanner.records %}
+<style>
+    #contents {
+        padding-top: 31px;
+        max-width: 1920px;
+        width: 100%;
+        height: 270px;
+        margin: 0 auto;
+    }
+    
+     @media only screen and (max-device-width: 480px) {
+         #contents {
+        padding-top: 31px;
+        max-width: 1920px;
+        width: 100%;
+        height: 1150px;
+        margin: 0 auto;
+    }
+    
+       @media only screen and (max-device-width: 380px) {
+         #contents {
+        padding-top: 31px;
+        max-width: 1920px;
+        width: 100%;
+        height: 1597px;
+        margin: 0 auto;
+    }
+    }
+</style>
+<script src="{{ 'assets/js/bxslider/jquery.bxslider.js'|theme }}"></script>
+<link href="{{ 'assets/js/bxslider/jquery.bxslider.css'|theme }}" rel="stylesheet" type="text/css"/>
+<div id="main_container">
+    <div id="mainvisual" style="width:100%;">
+        <ul class="bxslider">
+            {% for slider in UltraCaps %}
+                <li style="background:url(/storage/app/media{{ slider.path }}) top center;width:100%;height:516px;">
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div id="contents">
+    <div id="article_01">
+        <div id="article_02">
+            <p><span class="span01"><a href="/news_feed/1">Новости</a></span></p>
+            <br>
+            {% set posts = blogPosts.posts %}
+            {% for key,post in posts %}
+                <div style="width: 490px;float: left; {% if key%2 == 1 %} margin-left:6px;{% endif %}">
+                    <p style="font-size: 10pt;color: #666666;">
+                        <a href="{{ post.slug }}"><span class="span01">{{ post.title }}<br></span></a>
+                        <a href="{{ post.slug }}">{{ post.excerpt }}</a>
+                        <br><br>
+                    </p>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.pop_check').on("click", function () {
+            if ($(this).is(":checked") == true) {
+                set_cookie("ultracapacitor_pop_" + $(this).val(), "1", 24, "");
+                $(this).parent().parent().parent().find(".pop").css("display", "none");
+            }
+        });
+
+        $('.pop_close').on("click", function () {
+            $(this).parent().parent().parent().find(".pop").css("display", "none");
+        });
+
+        /*var roll2 = new rolling_banner(document.getElementById('mainvisual'));
+        roll2.start();
+        */
+        slider=$('.bxslider').bxSlider({
+            auto: true,
+            mode: 'fade',
+            autoControls: false,
+            adaptiveHeight: true,
+            captions: false
+        });
+        $('.bxslider li').on("click", function () {
+            slider.goToNextSlide();
+        });
+    });
+
+</script>

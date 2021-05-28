@@ -1,0 +1,10 @@
+fields:
+    header:
+        label: 'Заголовок Первого блока'
+        span: left
+        type: text
+    textblockone:
+        label: Текст
+        span: full
+        size: giant
+        type: richeditor
